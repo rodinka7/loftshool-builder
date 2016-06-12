@@ -3,50 +3,52 @@ html
 	include common/_head-my
 	body
 		//Не забыть дописать про обновление устаревшего браузера
+		#page-preloader
 		.wrapper
 			header.clearfix
 				.autorize-link__wrapper
 					a.autorize-link(href="#") Авторизоваться
-			.container.clearfix
-				.container__img-wrapper
-					img.container__img(src="assets/img/my-photo.jpg")
-				h2.container__header Татьяна Войтович
-				h4.container__info Личный сайт веб разработчика
-				.container__socials-wrapper
-					.container__socials.vk
-					.container__socials.git
-					.container__socials.in
-				.container__menu-wrapper
-					ul.container__menu-list
-						li.container__menu-item
-							a.container__menu-link(href='works.html') Мои работы		
-						li.container__menu-item
-							a.container__menu-link(href='#') Обо мне	
-						li.container__menu-item
-							a.container__menu-link(href='#') Блог	
-			.container.autorization.clearfix
-				.container-autorization__header авторизуйтесь
-				.container-autorization__line 
-				form.container-autorization__form 
-					input.container__input.login(type="text" value="логин")
-					input.container__input.password(type="password" value="логин")
-					input#container-autorization__man.container__checkbox(type="checkbox")
-					label.container-label.man(for="container-autorization__man") Я человек
-					.container-label Вы точно не робот?
-					input#container-autorization__yes.container__checkbox(type="radio")
-					label.container-label.yes(for="container-autorization__yes") Да
-					input#container-autorization__no.container__checkbox(type="radio")
-					label.container-label.no(for="container-autorization__no") Не уверен
-				.container__menu-wrapper
-					ul.container__menu-list
-						li.container__menu-item.autorization
-							a.container__menu-link(href='#') На главную	
-						li.container__menu-item.autorization
-							a.container__menu-link(href='#') Войти
+			.wrapper-for-animation(ontouchstart="this.classList.toggle('hover');")
+				.flipper
+					.container
+						.container__img-wrapper
+							img.container__img(src="assets/img/my-photo.jpg")
+						h2.container__header Татьяна Войтович
+						h4.container__info Личный сайт веб разработчика
+						.container__socials-wrapper
+							.container__socials.vk
+							.container__socials.git
+							.container__socials.in
+						.container__menu-wrapper
+							ul.container__menu-list
+								li.container__menu-item
+									a.container__menu-link(href='works.html') Мои работы		
+								li.container__menu-item
+									a.container__menu-link(href='#') Обо мне	
+								li.container__menu-item
+									a.container__menu-link(href='#') Блог	
+					.container.autorization
+						.container-autorization__header авторизуйтесь
+						.container-autorization__line 
+						form.container-autorization__form 
+							input.container__input.login(type="text" value="логин")
+							input.container__input.password(type="password" value="логин")
+							input#container-autorization__man.container__checkbox(type="checkbox")
+							label.container-label.man(for="container-autorization__man") Я человек
+							.container-label Вы точно не робот?
+							input#container-autorization__yes.container__checkbox(type="radio")
+							label.container-label.yes(for="container-autorization__yes") Да
+							input#container-autorization__no.container__checkbox(type="radio")
+							label.container-label.no(for="container-autorization__no") Не уверен
+						.container__menu-wrapper
+							ul.container__menu-list
+								li.container__menu-item.autorization
+									a.container__menu-link(href='welcome.html') На главную	
+								li.container__menu-item.autorization
+									a.container__menu-link(href='#') Войти
 						
 
 
 
 			footer.clearfix
 				h4.footer-info Татьяна Войтович | Создано с любовью в Loftschool | 2016
-	
