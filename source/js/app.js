@@ -9,14 +9,13 @@
   });
   //Preloader-end
 
-  $('.autorize-link').on('click', function(e) {
+  $('#autorize-link').on('click', function(e) {
   	e.preventDefault();
 
-  	var flipper = $(this).closest('.flipper'),
-  		wrapper = $(this).closest('.wrapper-for-animation.hover');
-	wrapper.css({'transform' : 'rotateY(180deg)'});  	
-  	flipper.css({'transform' : 'rotateY(180deg)'});
-})
+  	var $this = $(this),
+        transform = document.getElementById('transform');
+    transform.classList.toggle('hover');	
+});
   
 }
   /*setTimeout(function() {

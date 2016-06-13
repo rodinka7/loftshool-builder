@@ -1,6 +1,41 @@
 include common/_head-works
-.works__wrapper
+.works
 	.works__head мои работы
+		.works__line 
 	section.works__myWorks
+section.works-content
 	section.about
-		.works__head что обо мне говорят
+		.about__head что обо мне говорят
+		.works__line
+		.about__wrapper.clearfix
+			.about__wrapper-comment
+				.about__wrapper-img
+					img.about__img(src='assets/img/dima.jpg')
+				.about__wrapper-info Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis nobis impedit, adipisci. Voluptates rem architecto vitae quod ipsam vel quia assumenda temporibus cumque illum tempore explicabo accusamus quisquam possimus excepturi maiores saepe molestiae velit corporis, magni incidunt sunt culpa, harum, a provident? Unde laudantium nemo tempore a eligendi, consequuntur eos?
+				.about__wrapper-author основатель Loftschool
+					span Ковальчук Дмитрий
+			.about__wrapper-comment
+				.about__wrapper-img
+					img.about__img(src='assets/img/zar.jpg')
+				.about__wrapper-info Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis nobis impedit, adipisci. Voluptates rem architecto vitae quod ipsam vel quia assumenda temporibus cumque illum tempore explicabo accusamus quisquam possimus excepturi maiores saepe molestiae velit corporis, magni incidunt sunt culpa, harum, a provident? Unde laudantium nemo tempore a eligendi, consequuntur eos?
+				.about__wrapper-author главный преподователь
+					span Зар Захаров
+	.footer
+		.footer__menu
+			ul.footer__menu-list
+				li.footer__menu-item.info Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool
+				li.footer__menu-item.menu
+					ul.menu__list
+						li.menu__list-item
+							a.menu__list-link(href='works.html') Мои работы
+						li.menu__list-item
+							a.menu__list-link(href='works.html') Обо мне
+						li.menu__list-item 
+							a.menu__list-link(href='blog.html') Блог
+						li.menu__list-item 
+							a.menu__list-link(href='welcome.html') Авторизация
+					.container__socials-wrapper
+						.container__socials.vk
+						.container__socials.git
+						.container__socials.in
+

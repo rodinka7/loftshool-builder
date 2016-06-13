@@ -7,9 +7,9 @@ html
 		.wrapper
 			header.clearfix
 				.autorize-link__wrapper
-					a.autorize-link(href="#") Авторизоваться
-			.wrapper-for-animation(ontouchstart="this.classList.toggle('hover');")
-				.flipper
+					a#autorize-link(href="#") Авторизоваться
+			.wrapper-flipper
+				.flipper#transform
 					.container
 						.container__img-wrapper
 							img.container__img(src="assets/img/my-photo.jpg")
@@ -17,8 +17,11 @@ html
 						h4.container__info Личный сайт веб разработчика
 						.container__socials-wrapper
 							.container__socials.vk
+								a.container__socials-link(href="#") 
 							.container__socials.git
+								a.container__socials-link(href="#")
 							.container__socials.in
+								a.container__socials-link(href="#")
 						.container__menu-wrapper
 							ul.container__menu-list
 								li.container__menu-item
