@@ -97,13 +97,12 @@ header{
 		}
 	}
 	&__menu-wrapper {
-		height:45px;
+		width:100%;
 	}
 	&__menu-list {
 		list-style:none;
 		padding:0;
 		margin:0;
-
 	}
 	&__menu-item {
 		display:inline-block;
@@ -112,7 +111,7 @@ header{
 		background-color:#608c53;
 		line-height:45px;
 		margin-left:-4px;
-		padding:0 31px;
+		width:33%;
 		&:first-child{
 			margin-left:none;
 		}
@@ -124,10 +123,6 @@ header{
 		color:#ffffff;
 		text-decoration:none;
 		display:block;
-		cursor:pointer;
-		&:hover .container__menu-item {
-			background-color:#487d38;
-		}
 	}
 	&-autorization__header {
 		text-transform:uppercase;
@@ -159,10 +154,12 @@ header{
 		margin-bottom:20px;
 	}
 	&__menu-item.autorization {
-		padding:0 62px;
+		width:49%;
 	}
 }
-
+.container__menu-link:hover .container__menu-item {
+	background:#659753;
+}
 /*Animation*/
 .wrapper-flipper {
 	-webkit-perspective: 1000;
