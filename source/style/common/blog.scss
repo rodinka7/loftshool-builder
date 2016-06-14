@@ -6,7 +6,16 @@
 	&__list{
 		list-style:none;
 	}
+	&__item{
+		text-align:right;
+	}
 	&__link{
-		
+		text-decoration:none;
+		color:#455a64;
+		&:hover>.aside-wrapper__item{
+			text-decoration:underline;
+			border-right:1px solid #4e8839;
+			color:#4e8839;
+		}
 	}
 }
