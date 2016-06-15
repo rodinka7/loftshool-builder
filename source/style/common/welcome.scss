@@ -118,6 +118,9 @@ header{
 		&:last-child{
 			border:none;
 		}
+		&:hover{
+			background:#659753;
+		}
 	}
 	&__menu-link{
 		color:#ffffff;
@@ -156,9 +159,6 @@ header{
 	&__menu-item.autorization {
 		width:49%;
 	}
-}
-.container__menu-link:hover .container__menu-item {
-	background:#659753;
 }
 /*Animation*/
 .wrapper-flipper {

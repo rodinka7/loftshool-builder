@@ -1,0 +1,63 @@
+.about-me{
+	width:100%;
+	text-align:center;
+	height:100vh;
+	&__left{
+		float:left;
+		width:50%;
+		background:#ebefe2;
+		&_left-block{
+			width:30%;
+			float:left;
+		}
+		&_header{
+			font-size:63px;
+			color:#373e42;
+			font-family:'sansus_webissimoregular';
+			text-transform:uppercase;
+			margin-bottom:30px;
+		}
+		&_right-block{
+			width:70%;
+			float:right;
+		}
+		&_wrapper{
+			margin-right:50px;
+		}
+	}
+	&__img{
+		margin-bottom:40px;
+	}
+	&__header{
+		font-size:35px;
+		font-family:'sansus_webissimoregular';
+		text-transform:uppercase;
+		margin-bottom:30px;
+		color:#566358;
+	}
+	&__info{
+		margin-top:30px;
+		text-align:left;
+		font-size:16px;
+		font-family:'robotomedium';
+		color:#566358;
+	}
+	&__right{
+		float:right;
+		width:50%;
+		text-align:center;
+		padding-left:35px;
+	}
+	&__skills{
+
+	}
+}
+.map{
+	width:100%;
+	position:relative;
+	&__map-img{
+		width:100%;
+		height:100vh;
+
+	}
+}

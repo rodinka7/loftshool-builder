@@ -38,7 +38,7 @@
 	}
 	&__wrapper{
 		margin:0 auto 30px;
-		width:45%;
+		width:60%;
 		&-comment{
 			display:inline-block;
 			width:370px;
@@ -129,52 +129,5 @@
 		display:block;
 		text-decoration:none;
 		color:#ffffff;
-	}
-}
-.footer {
-	height:185px;
-	width:100%;
-	background-color: rgba(55, 62, 66, 0.7);
-	position:absolute;
-	left:0;
-	bottom:0;
-	&__menu-item{
-		display:inline-block;
-		width:33%;
-		border-right:1px solid #555956;
-		color:#aaacad;
-		&.cite{
-			box-sizing:border-box;
-			padding-left:30px;
-			border:none;
-			span{
-				display:block;
-			}
-		}
-		&.info{
-		padding:40px 0;
-		}
-	}
-	&__bottom{
-		width:100%;
-		height:40px;
-		line-height:40px;
-		text-align:center;
-		background:#668f56;
-		color:#ffffff;
-	}
-}
-.menu__list{
-	margin-left:30px;
-	padding:0;
-	list-style:none;
-	&-item{
-		display:inline-block;
-		width:20%;
-	}
-	&-link{
-	text-decoration:none;
-	font-weight:bold;
-	color:#ffffff;
 	}
 }
