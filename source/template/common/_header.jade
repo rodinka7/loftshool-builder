@@ -4,15 +4,14 @@ html
 	body
 		.head__table.cleafix
 			header.head__table-head
-				.container__socials-wrapper
-					.container__socials.vk
-					.container__socials.git
-					.container__socials.in
+				include _socials
 			.head__table-content
 				.container__img-wrapper
 					img.container__img(src="assets/img/my-photo.jpg")
 				h2.container__header Татьяна Войтович
 				h4.container__info.works Личный сайт веб разработчика
+			a.arrow-down(href="#")
+				img.arrow-down__img(src='assets/img/portf_arrow_down.svg')			
 			.head__table-footer.clearfix
 				svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangle")
 					polygon(points="0,0   0,86   500.8,86   500.8,75.5")

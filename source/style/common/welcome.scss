@@ -75,20 +75,8 @@ header{
 		margin-left:25px;
 		cursor:pointer;
 		vertical-align:top;
-		&.svg-vk {
+		&.vk {
 			margin-left:0px;
-			height:28px;
-			width:36px;
-		}
-		&.svg-github {
-			width:36px;
-			height:28px;
-		}
-		&.svg-in{
-			width:36px;
-			height:28px;
-			position:relative;
-			margin-top:-5px;
 		}
 		&-link {
 			display:block;
@@ -166,6 +154,13 @@ header{
 	}
 	&__menu-item.autorization {
 		width:49%;
+	}
+}
+/*Socials*/
+.social-icon{
+	color:#ffffff;
+	&:hover{
+		color:#659753;
 	}
 }
 /*Animation*/
