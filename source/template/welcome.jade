@@ -15,13 +15,7 @@ html
 							img.container__img(src="assets/img/my-photo.jpg")
 						h2.container__header Татьяна Войтович
 						h4.container__info Личный сайт веб разработчика
-						.container__socials-wrapper
-							.container__socials.vk
-								a.container__socials-link(href="#") 
-							.container__socials.git
-								a.container__socials-link(href="#")
-							.container__socials.in
-								a.container__socials-link(href="#")
+						include common/_socials
 						.container__menu-wrapper
 							ul.container__menu-list
 								li.container__menu-item
@@ -46,7 +40,7 @@ html
 						.container__menu-wrapper
 							ul.container__menu-list
 								li.container__menu-item.autorization
-									a.container__menu-link(href='welcome.html') На главную	
+									a.container__menu-link#main(href='welcome.html') На главную	
 								li.container__menu-item.autorization
 									a.container__menu-link(href='#') Войти
 			footer.clearfix

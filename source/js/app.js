@@ -15,10 +15,15 @@
   	var $this = $(this),
         transform = document.getElementById('transform');
     transform.classList.toggle('hover');	
-});
+  });
+  
+  $('#main').on('click', function(e){
+      e.preventDefault();
+
+      var $this = $(this),
+          transform = document.getElementById('transform');
+      transform.classList.toggle('hover');      
+  });
   
 }
-  /*setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
-  }, 1000);*/
 )();
