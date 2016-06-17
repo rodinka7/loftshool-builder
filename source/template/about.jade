@@ -17,19 +17,25 @@ section.about-me
 		.works__line
 		.about-me__info Больше всего я предпочитаю Frontend разработку, однако иногда приходится решать проблемы, связанные с Backend
 		.about-me__skills.clearfix
+			include common/_skills
 section.map
 	#map
 	.my-contacts
 		.about-me__header контакты
 			.works__line
 		.my-contacts__info
-			.my-contacts__sk
-			.my-contacts__sk_name Foxy_charm
-			.my-contacts__mail
-			.my-contacts__mail_name rodinka7@gmail.com
-			.my-contacts__phone
-			.my-contacts__phone_number +38 097 434 76 67
-			.my-contacts__adress
-			.my-contacts__adress_name Коростень, Житомирская обл.
+			ul.my-contacts__list
+				li.my-contacts__item
+					.my-contacts__sk_name Foxy_charm
+						.my-contacts__sk.svg-skype
+				li.my-contacts__item
+					.my-contacts__mail_name rodinka7@gmail.com
+						.my-contacts__mail.svg-envelope2
+				li.my-contacts__item
+					.my-contacts__phone_number +38 097 434 76 67
+						.my-contacts__phone.svg-phone
+				li.my-contacts__item
+					.my-contacts__adress_name Коростень, Житомирская обл.
+						.my-contacts__adress.svg-map_marker
 
 	include common/footer

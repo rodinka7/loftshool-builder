@@ -49,7 +49,6 @@ header{
 	border-radius:10px;
 	text-align:center;
 	overflow:hidden;
-	margin:auto;
 	
 	&__img-wrapper {
 		display:inline-block;
@@ -64,11 +63,11 @@ header{
 	}
 	&__info {
 		color:#8f9191;
-		margin-bottom:0;
+		margin-bottom:35px;
 	}
 	&__socials-wrapper {
 		display:inline-block;	
-		margin-bottom:45px;
+		margin:0;
 	}
 	&__socials {
 		display:inline-block;	
@@ -85,6 +84,7 @@ header{
 	}
 	&__menu-wrapper {
 		width:100%;
+		margin-top:30px;
 	}
 	&__menu-list {
 		list-style:none;
@@ -133,15 +133,8 @@ header{
 		border-radius:0 25px 25px 0;
 		padding-left:20px;
 		color:#8f9191;
-		display:block;
-		margin:0 auto 20px;
-	
-		&::before{
-			content:'';
-			width:45px;
-			height:45px;
-			border-radius:25px 0 0 25px;
-			background:#f0efea;
+		&_wrapper{
+			margin:0 auto 20px;
 		}
 	}
 	&__checkbox {
@@ -155,6 +148,25 @@ header{
 	&__menu-item.autorization {
 		width:49%;
 	}
+}
+/*Inputs*/
+.input_login, .input_password{
+	width:45px;
+	height:45px;
+	background-color:#f0efea;
+	border-radius:25px 0 0 25px;
+	display:inline-block;
+	position:relative;
+	top:18px;
+	left:8px;
+	border:1px solid #8f9191;
+}
+.svg-login,.svg-password{
+	width:25px;
+	height:25px;
+	position:absolute;
+	top:10px;
+	left:10px;
 }
 /*Socials*/
 .social-icon{

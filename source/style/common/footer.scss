@@ -5,21 +5,28 @@
 	position:absolute;
 	left:0;
 	bottom:0;
+	text-align:left;
+	&__menu-list{
+		list-style:none;
+	}
 	&__menu-item{
 		display:inline-block;
 		width:33%;
 		border-right:1px solid #555956;
 		color:#aaacad;
 		&.cite{
-			box-sizing:border-box;
 			padding-left:30px;
 			border:none;
+			font-family:'robotoitalic';
 			span{
 				display:block;
+				font-family:'robotobold';
 			}
 		}
 		&.info{
-		padding:40px 0;
+		padding:20px 0;
+		font-family:'robotolight';
+		font-size:16px;
 		}
 	}
 	&__bottom{
@@ -29,12 +36,14 @@
 		text-align:center;
 		background:#668f56;
 		color:#ffffff;
+		position:absolute;
+		bottom:0;
+		left:0;
 	}
 }
 .menu__list{
-	margin-left:30px;
-	padding:0;
 	list-style:none;
+	margin-left:-40px;
 	&-item{
 		display:inline-block;
 		width:20%;

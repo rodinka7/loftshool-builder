@@ -1,0 +1,35 @@
+.menu-color{
+	background:rgba(108, 156, 90, 0.8);
+	width:100%;
+	height:100vh;
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+	&__list{
+		list-style:none;
+		text-align:center;
+		margin-top:10%;
+	}
+	&__item{
+		margin-bottom:30px;
+	}
+	&__link{
+		text-decoration:none;
+		font-size:63px;
+		font-family:'sansus_webissimoregular';
+		color:#ffffff;
+		text-transform:uppercase;
+		&:hover+.menu-color__line{
+			display:block;
+		}
+	}
+	&__line{
+		width:90px;
+		height:4px;
+		background:#ffffff;
+		margin:auto;
+		display:none;
+
+	}
+}

@@ -2,9 +2,10 @@ doctype html
 html
 	include _head-my
 	body
-		.head__table.cleafix
+		.head__table
 			header.head__table-head
 				include _socials
+				a#head__menu.svg-hamburger(href="#")
 			.head__table-content
 				.container__img-wrapper
 					img.container__img(src="assets/img/my-photo.jpg")
@@ -16,3 +17,4 @@ html
 				svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangle")
 					polygon(points="0,0   0,86   500.8,86   500.8,75.5")
 					polygon(points="1000,0   1000,86   500,86   500,75.5")
+		include _menu

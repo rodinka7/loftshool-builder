@@ -1,0 +1,75 @@
+.frontend{
+	width:100%;
+	text-align:left;
+	&__head{
+		font-size:28px;
+		font-family:'robotomedium';
+		width:100px;
+		color:#566358;
+		margin-bottom:20px;
+	}
+	&__blocks{
+		width:120px;
+		height:120px;
+		display:inline-block;
+		position:relative;
+	}
+	&__text{
+		color:#77a266;
+		font-size:13.95px;
+		text-align:center;
+		position:absolute;
+		top:35%;
+		left:30%;
+		white-spacing:nowrap;
+	}
+}
+.circles{
+	width:120px;
+	height:120px;
+	fill:none;
+	stroke-width:20px;	
+}
+.sector{
+	stroke-dasharray:251;
+	transition: all 1s;
+}
+.html{
+	stroke-dashoffset:30;
+}
+.css{
+	stroke-dashoffset:50;
+	opacity:0.95;
+}
+.js{
+	stroke-dashoffset:50;
+	opacity:0.95;
+}
+.php{
+	stroke-dashoffset:130;
+	opacity:0.3;
+}
+.mysql{
+	stroke-dashoffset:110;
+	opacity:0.4;
+}
+.node{
+	stroke-dashoffset:150;
+	opacity:0.3;
+}
+.mongo{
+	stroke-dashoffset:100;
+	opacity:0.5;
+}
+.git{
+	stroke-dashoffset:50;
+	opacity:0.95;
+}
+.gulp{
+	stroke-dashoffset:70;
+	opacity:0.8;
+}
+.bower{
+	stroke-dashoffset:85;
+	opacity:0.65;
+}

@@ -6,7 +6,6 @@
 		float:left;
 		width:50%;
 		background:#ebefe2;
-		height:100vh;
 		&_left-block{
 			width:30%;
 			float:left;
@@ -17,6 +16,7 @@
 			font-family:'sansus_webissimoregular';
 			text-transform:uppercase;
 			margin-bottom:30px;
+			background:url(../img/about_header.svg) top center no-repeat;
 		}
 		&_right-block{
 			width:70%;
@@ -37,7 +37,7 @@
 		color:#566358;
 	}
 	&__info{
-		margin-top:30px;
+		margin:30px 0 60px 0;
 		text-align:left;
 		font-size:16px;
 		font-family:'robotomedium';
@@ -64,13 +64,41 @@
 .my-contacts{
 	width:380px;
 	height:315px;
-	background:rgba(244, 245, 240,0.7);
+	background:rgba(244, 245, 240,0.9);
 	text-align:center;
 	padding:35px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-190px 0 0 -190px;
 	&__info{
-		font-size:35px;
+		font-size:16px;
 		color:#86a77a;
-		font-family:'sansus_webissimoregular';
+		font-family:'robotomedium';
+		text-align:left;
+	}
+	&__list{
+		list-style:none;
+	}
+	&__item{
+		margin-bottom:30px;
+	}
+	.my-contacts__sk_name, 
+	.my-contacts__mail_name,
+	.my-contacts__adress_name,
+	.my-contacts__phone_number{
+		padding-left:30px;
+		display:inline-block;
+		position:relative;
+	}  
+	.svg-map_marker,.svg-skype,
+	.svg-envelope2,.svg-phone {
+		width:35px;
+		height:35px;
+		display:inline-block;
+		position:absolute;
+		top:-5px;
+		left:-30px;
 		text-align:left;
 	}
 }

@@ -28,8 +28,14 @@ html
 						.container-autorization__header авторизуйтесь
 						.container-autorization__line 
 						form.container-autorization__form 
-							input.container__input.login(type="text" value="логин")
-							input.container__input.password(type="password" value="логин")
+							.container__input_wrapper
+								label(for="input_login").input_login
+									.svg-login
+								input.container__input#input_login(type="text" value="логин")
+							.container__input_wrapper
+								label(for="input_password").input_password
+									.svg-password
+								input.container__input#input_password(type="password" value="логин")
 							input#container-autorization__man.container__checkbox(type="checkbox")
 							label.container-label.man(for="container-autorization__man") Я человек
 							.container-label Вы точно не робот?
