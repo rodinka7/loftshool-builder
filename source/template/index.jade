@@ -1,0 +1,53 @@
+doctype html
+html
+	include common/_head-my
+	body
+		//Не забыть дописать про обновление устаревшего браузера
+		#page-preloader
+		.wrapper
+			header.clearfix
+				.autorize-link__wrapper
+					a#autorize-link(href="#") Авторизоваться
+			.wrapper-flipper
+				.flipper#transform
+					.container
+						.container__img-wrapper
+							img.container__img(src="assets/img/my-photo.jpg")
+						h2.container__header Татьяна Войтович
+						h4.container__info Личный сайт веб разработчика
+						include common/_socials
+						.container__menu-wrapper
+							ul.container__menu-list
+								li.container__menu-item
+									a.container__menu-link(href='works.html') Мои работы		
+								li.container__menu-item
+									a.container__menu-link(href='about.html') Обо мне	
+								li.container__menu-item
+									a.container__menu-link(href='blog.html') Блог	
+					.container.autorization
+						.container-autorization__header авторизуйтесь
+						.container-autorization__line 
+						form.container-autorization__form 
+							.container__input_wrapper
+								label(for="input_login").input_login
+									.svg-login
+								input.container__input#input_login(type="text" value="логин")
+							.container__input_wrapper
+								label(for="input_password").input_password
+									.svg-password
+								input.container__input#input_password(type="password" value="логин")
+							input#container-autorization__man.container__checkbox(type="checkbox")
+							label.container-label.man(for="container-autorization__man") Я человек
+							.container-label.queswion Вы точно не робот?
+							input#container-autorization__yes.container__checkbox(type="radio")
+							label.container-label.yes(for="container-autorization__yes") Да
+							input#container-autorization__no.container__checkbox(type="radio")
+							label.container-label.no(for="container-autorization__no") Не уверен
+						.container__menu-wrapper
+							ul.container__menu-list
+								li.container__menu-item.autorization
+									a.container__menu-link#main(href='welcome.html') На главную	
+								li.container__menu-item.autorization
+									a.container__menu-link(href='#') Войти
+			footer.clearfix
+				h4.footer-info &#169; Татьяна Войтович | Создано с любовью в Loftschool | 2016

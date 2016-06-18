@@ -1,41 +1,11 @@
-include common/_header
-section.about-me
-	section.about-me__left
-		.about-me__left_left-block
-			.about-me__left_header обо мне
-			.works__line
-		.about-me__left_right-block
-			img(src="assets/img/about-me.jpg").about-me__img
-			.about-me__left_wrapper
-				.about-me__header кто я
-				.works__line
-				.about-me__info Я работаю таможенным брокером, но главной моей целью является освоение профессии веб разработчика. Я очень люблю делать сайты, для меня это увлекатеное занятие, которое может быть не только хобби, но и приносить деньги.
-				.about-me__info На данный момент я сделала только один сайт, однако это только начало. В планах у меня есть несколько проектов, которые помогут мне осуществить свою мечту. 
+extends common/_header
+block page_name
+	h4.container__info.works Личный сайт веб разработчика 
+block triangles
+	.head__table-footer.clearfix
+		svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangle")
+			polygon(points="0,0   0,86   500.8,86   500.8,75.5" fill="#ebefe2")
+			polygon(points="1000,0   1000,86   500,86   500,75.5")
 
-	section.about-me__right
-		.about-me__header чем я могу быть вам полезна
-		.works__line
-		.about-me__info Больше всего я предпочитаю Frontend разработку, однако иногда приходится решать проблемы, связанные с Backend
-		.about-me__skills.clearfix
-			include common/_skills
-section.map
-	#map
-	.my-contacts
-		.about-me__header контакты
-			.works__line
-		.my-contacts__info
-			ul.my-contacts__list
-				li.my-contacts__item
-					.my-contacts__sk_name Foxy_charm
-						.my-contacts__sk.svg-skype
-				li.my-contacts__item
-					.my-contacts__mail_name rodinka7@gmail.com
-						.my-contacts__mail.svg-envelope2
-				li.my-contacts__item
-					.my-contacts__phone_number +38 097 434 76 67
-						.my-contacts__phone.svg-phone
-				li.my-contacts__item
-					.my-contacts__adress_name Коростень, Житомирская обл.
-						.my-contacts__adress.svg-map_marker
-
-	include common/footer
+block content
+	include common/_about-content

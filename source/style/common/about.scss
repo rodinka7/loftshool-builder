@@ -7,7 +7,7 @@
 		width:50%;
 		background:#ebefe2;
 		&_left-block{
-			width:30%;
+			width:50%;
 			float:left;
 		}
 		&_header{
@@ -16,10 +16,11 @@
 			font-family:'sansus_webissimoregular';
 			text-transform:uppercase;
 			margin-bottom:30px;
+			padding:50px 0;
 			background:url(../img/about_header.svg) top center no-repeat;
 		}
 		&_right-block{
-			width:70%;
+			width:50%;
 			float:right;
 		}
 		&_wrapper{
@@ -28,6 +29,7 @@
 	}
 	&__img{
 		margin-bottom:40px;
+		max-width:100%;
 	}
 	&__header{
 		font-size:35px;

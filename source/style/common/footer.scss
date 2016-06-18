@@ -1,3 +1,4 @@
+@import 'mixins';
 .footer {
 	height:185px;
 	width:100%;
@@ -6,16 +7,13 @@
 	left:0;
 	bottom:0;
 	text-align:left;
-	&__menu-list{
-		list-style:none;
-	}
 	&__menu-item{
 		display:inline-block;
 		width:33%;
 		border-right:1px solid #555956;
 		color:#aaacad;
+		padding:20px 30px;
 		&.cite{
-			padding-left:30px;
 			border:none;
 			font-family:'robotoitalic';
 			span{
@@ -24,7 +22,6 @@
 			}
 		}
 		&.info{
-		padding:20px 0;
 		font-family:'robotolight';
 		font-size:16px;
 		}
@@ -56,5 +53,23 @@
 	text-decoration:none;
 	font-weight:bold;
 	color:#ffffff;
+	}
+}
+/*Adaptive footer*/
+.footer__menu-item.info{
+	@include tablets{
+		display:block;
+		width:50%;
+	}
+}
+.footer__menu-item.menu{
+	@include tablets{
+		width:50%;
+	}
+}
+.footer__menu-item.cite{
+	@include tablets{
+		display:block;
+		width:100%;
 	}
 }
