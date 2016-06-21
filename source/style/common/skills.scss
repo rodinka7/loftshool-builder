@@ -1,12 +1,18 @@
 .frontend{
 	width:100%;
 	text-align:left;
+	@include tablets{
+		text-align:center;
+	}
 	&__head{
 		font-size:28px;
 		font-family:'robotomedium';
 		width:100px;
 		color:#566358;
 		margin-bottom:20px;
+		@include tablets{
+			margin:auto;
+		}
 	}
 	&__blocks{
 		width:120px;

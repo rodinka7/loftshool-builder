@@ -2,11 +2,24 @@
 	width:100%;
 	margin-top:70px;
 	position:relative;
-	height:100%;
+	padding-bottom:185px;
+	@include tablets{
+		padding-bottom:270px;
+	}
 }
 .aside-wrapper{
 	width:21.66%;
-	float:left;
+	float:left;	
+	@include tablets{
+		display:none;
+		background:#4e8839;
+		width:40%;
+		padding:40px 0;
+		border-radius:0 10px 10px 0;
+		z-index:2;
+		position:fixed;
+		top:30%;
+	}
 	&__list{
 		list-style:none;
 		margin-left:6.6%;
@@ -23,9 +36,17 @@
 	&__link{
 		text-decoration:none;
 		color:#455a64;
+		font-family:'robotoregular';
+		font-size:16px;
 		&:hover{
 			color:#4e8839;
 			font-weight:bold;
+		}
+		@include tablets{
+			color:#ffffff;
+			&:hover{
+				color:#ffffff;
+			}
 		}
 	}
 }
@@ -33,6 +54,12 @@
 	width:48.88%;
 	float:right;
 	margin-right:22.77%;
+	position:relative;
+	@include tablets{
+		float:none;
+		width:90%;
+		margin:auto;
+	}
 	&__article{
 		border-bottom:3px solid #ecebe4;
 		margin-bottom:70px;
@@ -44,15 +71,41 @@
 		color:#455a64;
 		font-size:35px;
 		margin-bottom:30px;
+		font-family:'sansus_webissimoregular';
+		@include tablets{
+			font-size:30px;
+		}
 	}
 	.article__date{
 		color:#8eae80;
 		font-size:16px;
 		margin-bottom:30px;
+		font-family:'robotoregular';
+		@include tablets{
+			font-size:14px;
+		}	
 	}
 	.article__content{
 		color:#455a64;
 		margin-bottom:70px;
 		line-height:1.5;
+		font-family:'robotoregular';
+		@include tablets{
+			font-size:14px;
+		}	
+	}
+}
+#aside-button{
+	cursor:pointer;
+	width:30px;
+	height:50px;
+	background:#8eae80;
+	border:1px solid #8eae80;
+	border-radius:0 50% 50% 0;
+	position:fixed;
+	top:50%;
+	display:none;
+	@include tablets{
+		display:block;
 	}
 }

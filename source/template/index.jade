@@ -8,9 +8,10 @@ html
 			header.clearfix
 				.autorize-link__wrapper
 					a#autorize-link(href="#") Авторизоваться
+			
 			.wrapper-flipper
 				.flipper#transform
-					.container
+					.container.clearfix
 						.container__img-wrapper
 							img.container__img(src="assets/img/my-photo.jpg")
 						h2.container__header Татьяна Войтович
@@ -24,7 +25,7 @@ html
 									a.container__menu-link(href='about.html') Обо мне	
 								li.container__menu-item
 									a.container__menu-link(href='blog.html') Блог	
-					.container.autorization
+					.container.autorization.clearfix
 						.container-autorization__header авторизуйтесь
 						.container-autorization__line 
 						form.container-autorization__form 
@@ -49,5 +50,5 @@ html
 									a.container__menu-link#main(href='welcome.html') На главную	
 								li.container__menu-item.autorization
 									a.container__menu-link(href='#') Войти
-			footer.clearfix
+			footer
 				h4.footer-info &#169; Татьяна Войтович | Создано с любовью в Loftschool | 2016
