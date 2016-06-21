@@ -28,7 +28,11 @@ html{
 	height:100vh;
 	background:#ebefe2;
 	min-width:650px;
+	@include tablets{
+		height:auto;
+		min-height:0;
 	}
+}
 .about-me__left.inform {
 	background:#ebefe2;
 	text-align:center;
@@ -88,7 +92,7 @@ html{
 	top:0;
 	left:-30px;
 }
-.about-me__right.slider{
+.about-me__right.slider__right{
 	background:#e2e4d7;
 	position:relative;
 	@include tablets{
@@ -199,6 +203,7 @@ html{
 		padding-top:rem(50px);
 		background:url(../img/about_header.svg) top center no-repeat;
 		padding:rem(50px) rem(100px);
+		margin:auto;
 	}	
 	&__review{
 		background:url(../img/about.jpg) top center no-repeat;
@@ -211,12 +216,17 @@ html{
 	&__wrapper{
 		margin:auto;
 		margin-bottom:rem(30px);
-		width:45%;
+		width:60%;
 		&-comment{
 			display:inline-block;
 			width:rem(370px);
+			margin:auto;
+			font-family:'robotoitalic';
 			&:first-child{
 				margin-right:rem(20px);
+				@include tablets{
+					margin-right:none;
+				}
 			}
 		}
 		&-img{
@@ -228,16 +238,17 @@ html{
 			margin-bottom:20px;
 		}
 		&-info{
-			font-style:italic;
 			line-height:1.5;
 			font-size:16px;
 		}
 		&-author{
 			display:block;
 			float:right;
+			font-family:'robotobolditalic';
 			span{
 				color:#4e8839;
 				display:block;
+				font-family:'robotoitalic';
 			}
 		}
 	}

@@ -61,7 +61,7 @@
 		height:270px;
 		font-size:14px;
 	}
-	@include laptop{
+	@include desktop{
 		font-size:14px;	
 	}
 }
@@ -81,9 +81,7 @@
 		display:block;
 		width:100%;
 	}
-	@include laptop{
-		
+	@include desktop{
 		font-size:14px;
-
 	}
 }
