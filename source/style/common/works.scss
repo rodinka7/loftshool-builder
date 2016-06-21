@@ -217,10 +217,11 @@ html{
 		margin:auto;
 		margin-bottom:rem(30px);
 		width:60%;
+		text-align:center;
 		&-comment{
+			text-align:left;
 			display:inline-block;
 			width:rem(370px);
-			margin:auto;
 			font-family:'robotoitalic';
 			&:first-child{
 				margin-right:rem(20px);
