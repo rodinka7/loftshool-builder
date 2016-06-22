@@ -9,7 +9,7 @@
 		aside_block.animate({'left':'0'},1000);
 
 		aside_block.on('click', function(){ 
-			$(this).animate({'left':'-40%'}, 1000);
+			$(this).animate({'left':'-60%'}, 1000);
 		});
 	});
 

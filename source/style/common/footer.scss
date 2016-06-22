@@ -8,14 +8,16 @@
 	position:absolute;
 	bottom:0;
 	left:0;
+	&__menu-list{
+		padding:5px 0;
+	}
 	&__menu-item{
 		display:inline-block;
 		width:33%;
-		border-right:1px solid #555956;
+		border-left:1px solid #555956;
 		color:#aaacad;
-		padding:20px 30px;
+		padding:10px 30px;
 		&.cite{
-			border:none;
 			font-family:'robotoitalic';
 			span{
 				display:block;
@@ -24,6 +26,7 @@
 		}
 		&.info{
 		font-family:'robotolight';
+		border:none;
 		}
 	}
 	&__bottom{
@@ -36,6 +39,10 @@
 		position:absolute;
 		bottom:0;
 		left:0;
+		@include phones{
+			height:60px;
+			line-height:1.7;
+		}
 	}
 }
 .menu__list{
@@ -64,16 +71,33 @@
 	@include desktop{
 		font-size:14px;	
 	}
+	@include phones{
+		height:350px;
+		text-align:center;
+	}
 }
 .footer__menu-item.info{
 	@include tablets{
 		width:49%;
 	}
+	@include phones {
+		width:95%;
+		margin:auto;
+		display:block;
+		border-bottom:1px solid #555956; 
+		padding-bottom:10px;
+	}
 }
 .footer__menu-item.menu{
 	@include tablets{
 		width:49%;
-		border:none;
+	}
+	@include phones {
+		width:95%;
+		margin:auto;
+		display:block;
+		border-bottom:1px solid #555956;
+		border-left:none;
 	}
 }
 .footer__menu-item.cite{
@@ -83,5 +107,11 @@
 	}
 	@include desktop{
 		font-size:14px;
+	}
+	@include phones {
+		width:95%;
+		margin:auto;
+		display:block;
+		border:none; 
 	}
 }

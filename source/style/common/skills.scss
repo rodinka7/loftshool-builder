@@ -13,21 +13,32 @@
 		@include tablets{
 			margin:auto;
 		}
+		@include phones{
+			font-size:21px;
+		}
 	}
 	&__blocks{
 		width:120px;
 		height:120px;
 		display:inline-block;
 		position:relative;
+		@include phones{
+			width:110px;
+			height:110px;
+			margin:20px;
+		}
 	}
 	&__text{
 		color:#77a266;
-		font-size:13.95px;
+		font-size:13px;
 		text-align:center;
 		position:absolute;
 		top:35%;
 		left:30%;
 		white-spacing:nowrap;
+		@include phones{
+			font-size:12px;
+		}
 	}
 }
 .circles{

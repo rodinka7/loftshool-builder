@@ -23,6 +23,12 @@
 		&:hover+.menu-color__line{
 			display:block;
 		}
+		@include tablets{
+			font-size:49px;
+		}
+		@include phones{
+			font-size:35px;
+		}
 	}
 	&__line{
 		width:90px;

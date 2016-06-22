@@ -9,25 +9,25 @@ html{
 	text-align:center;
 	font-family:'sansus_webissimoregular';
 	color:#373e42;
-	font-size:rem(63px);
+	font-size:63px;
 	background:url(../img/works_header.svg) top center no-repeat;
 	@include tablets{
-		backgound-size:30%;
+		background-size:90%;
 	}
-	padding:rem(50px) 0 rem(100px);
+	padding:50px 0 100px;
 	}
 	&__line{
-		width:rem(90px);
-		height:rem(4px);
+		width:90px;
+		height:4px;
 		background:#373e42;
-		margin:rem(30px) auto;
+		margin:30px auto;
 	}
 }
 .slider {
 	width:100%;
 	height:100vh;
 	background:#ebefe2;
-	min-width:650px;
+	min-height:650px;
 	@include tablets{
 		height:auto;
 		min-height:0;
@@ -54,7 +54,6 @@ html{
 		float:none;
 		width:100%;
 	}
-
 }
 .about-me__left_center{
 	display:inline-block;
@@ -63,7 +62,7 @@ html{
 }
 .works__skills-info{
 	color:#6c9c5a;
-	font-size:rem(16.02px);
+	font-size:16.02px;
 	font-family:'robotomedium';
 	text-transform:uppercase;
 	margin-bottom:rem(60px);
@@ -105,7 +104,7 @@ html{
 	bottom:0;
 	left:0;
 	right:0;
-	height:rem(230px);
+	height:230px;
 	display:block;
 	@include tablets{
 		position:static;
@@ -169,11 +168,12 @@ html{
 	top:0;
 	left:100%;
 	width:100%;
-	height:rem(400px);
+	height:400px;
 	@include tablets{
 		position:static;
 		height:auto;
 	}
+	
 	&_img{
 		max-width:90%;
 		max-height:90%;
@@ -187,7 +187,6 @@ html{
 			position:static;
 		}
 	}
-
 }
 .about{
 	margin:0;
@@ -200,34 +199,53 @@ html{
 		color:#373e42;
 		font-size:63px;	
 		text-align:center;
-		padding-top:rem(50px);
+		padding-top:50px;
 		background:url(../img/about_header.svg) top center no-repeat;
-		padding:rem(50px) rem(100px);
+		padding:50px 100px;
 		margin:auto;
+		@include tablets{
+			background-size:90%;
+		}
+		&.inside{
+			font-family:'sansus_webissimoregular';
+			@include phones{
+				font-size:30px;
+			}
+		}
 	}	
 	&__review{
 		background:url(../img/about.jpg) top center no-repeat;
 		background-size:cover;
-		padding-bottom:rem(185px);
+		padding-bottom:185px;
+		
 		@include tablets{
-		padding-bottom:270px;
+			padding-bottom:270px;
+		}
+		@include phones {
+			padding-bottom:350px;
 		}
 	}
 	&__wrapper{
 		margin:auto;
-		margin-bottom:rem(30px);
+		margin-bottom:30px;
 		width:60%;
 		text-align:center;
+		@include tablets{
+			width:100%;
+		}
 		&-comment{
 			text-align:left;
 			display:inline-block;
-			width:rem(370px);
+			width:370px;
 			font-family:'robotoitalic';
 			&:first-child{
-				margin-right:rem(20px);
+				margin-right:20px;
 				@include tablets{
-					margin-right:none;
+					margin:0 auto 30px;
 				}
+			}
+			@include phones{
+				width:300px;
 			}
 		}
 		&-img{
@@ -245,7 +263,7 @@ html{
 		&-author{
 			display:block;
 			float:right;
-			font-family:'robotobolditalic';
+			font-family:'robotobold_italic';
 			span{
 				color:#4e8839;
 				display:block;
@@ -255,41 +273,51 @@ html{
 	}
 }
 .contact-me{
-	padding-top:rem(40px);
-	width:rem(380px);
+	padding-top:40px;
+	width:380px;
 	margin:auto;
-	margin-bottom:rem(25px);
+	margin-bottom:25px;
 	background:rgba(218, 219, 214, 0.7);
 	color:#566358;
 	text-align:center;
-	border-radius:rem(10px);
+	border-radius:10px;
 	overflow:hidden;
+	@include phones{
+		width:300px;
+	}
 	&__header{
 		text-transform:uppercase;
-		font-size:rem(35px);
-		margin-bottom:rem(30px);
+		font-size:35px;
+		margin-bottom:30px;
 		font-family:'sansus_webissimoregular';
+		@include phones{
+			font-size:21px;
+		}
 	}
 	&__line{
-		width:rem(90px);
-		height:rem(4px);
+		width:90px;
+		height:4px;
 		background:#566358;
 		display:inline-block;
-		margin-bottom:rem(30px);
+		margin-bottom:30px;
 	}
 	&__input, &__textarea{
-		width:rem(340px);
-		border-radius:rem(25px);
-		padding-left:rem(20px);
-		margin-bottom:rem(20px);
+		width:340px;
+		border-radius:25px;
+		padding-left:20px;
+		margin-bottom:20px;
 		color:#566358;
+		@include phones{
+			font-size:14px;
+			width:260px;
+		}
 	}
 	&__textarea{
-		padding-top:rem(20px);
+		padding-top:20px;
 	}
 	&__input{
-		height:rem(45px);
-		font-family:'robotoregular';
+		height:45px;
+		font-family:'robotomedium';
 	}
 	&__wrapper{
 		width:100%;
@@ -303,9 +331,9 @@ html{
 		display:inline-block;
 		border-right:2px solid #a0b89d;
 		background-color:#608c53;
-		line-height:rem(45px);
-		margin-left:rem(-4px);
-		width:49%;
+		line-height:45px;
+		margin-left:-3px;
+		width:49.9%;
 		&:first-child{
 			margin-left:none;
 		}

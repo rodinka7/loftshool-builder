@@ -6,19 +6,22 @@
 	@include tablets{
 		padding-bottom:270px;
 	}
+	@include phones {
+		padding-bottom:350px;
+	}
 }
 #aside{
 	width:21.66%;
 	float:left;	
 	@include tablets{
 		background:#4e8839;
-		width:40%;
+		width:60%;
 		padding:40px 0;
 		border-radius:0 10px 10px 0;
 		z-index:2;
 		position:fixed;
 		top:30%;
-		left:-40%;
+		left:-60%;
 	}
 }
 .aside-wrapper__list{
@@ -37,7 +40,7 @@
 .aside-wrapper__link{
 	text-decoration:none;
 	color:#455a64;
-	font-family:'robotoregular';
+	font-family:'robotomedium';
 	font-size:16px;
 	&:hover{
 		color:#4e8839;
@@ -78,10 +81,10 @@
 		}
 	}
 	.article__date{
-		color:#8eae80;
+		color:#4e8839;
 		font-size:16px;
 		margin-bottom:30px;
-		font-family:'robotoregular';
+		font-family:'robotomedium';
 		@include tablets{
 			font-size:14px;
 		}	
@@ -90,7 +93,7 @@
 		color:#455a64;
 		margin-bottom:70px;
 		line-height:1.5;
-		font-family:'robotoregular';
+		font-family:'robotomedium';
 		@include tablets{
 			font-size:14px;
 		}	
@@ -100,7 +103,7 @@
 	cursor:pointer;
 	width:30px;
 	height:50px;
-	background:#8eae80;
+	background:#4e8839;
 	border:1px solid #8eae80;
 	border-radius:0 50% 50% 0;
 	position:fixed;
