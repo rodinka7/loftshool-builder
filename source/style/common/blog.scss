@@ -10,23 +10,35 @@
 		padding-bottom:350px;
 	}
 }
-#aside{
+.aside-wrapper{
 	width:21.66%;
-	float:left;	
-	@include tablets{
+	float:left;
+	&#aside{
+		@include tablets{
 		background:#4e8839;
 		width:60%;
+		height:100%;
 		padding:40px 0;
 		border-radius:0 10px 10px 0;
-		z-index:2;
 		position:fixed;
 		top:30%;
 		left:-60%;
-	}
+		z-index:15;
+		}
+	}	
+}
+.aside-wrapper__static{
+	position:relative;
+	height:1px;
 }
 .aside-wrapper__list{
 	list-style:none;
 	margin-left:6.6%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+
 }
 .aside-wrapper__item{
 	margin-bottom:40px;
@@ -111,5 +123,13 @@
 	display:none;
 	@include tablets{
 		display:block;
+		z-index:10;
 	}
+}
+.fixed-wrapper{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:5;
 }

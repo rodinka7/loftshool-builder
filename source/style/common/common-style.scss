@@ -3,10 +3,10 @@
 }
 .clearfix:before {
 	content:'';
-	display:table;
+	display:block;
 }
 .clearfix:after {
 	content:'';
-	display:table;
+	display:block;
 	clear:both;
 }

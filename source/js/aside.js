@@ -13,4 +13,23 @@
 		});
 	});
 
+	$(window).scroll(function(){
+		var wScroll = $(window).scrollTop(),
+			menu = $('.static .aside-wrapper__list'),
+			sidebar = $('.static .aside-wrapper__static'),
+			stickyStart = sidebar.offset().top,
+			menuClone = sidebar.clone(),
+			fixedSidebar = $('.fixed-wrapper .aside-wrapper');
+
+		if (wScroll >= stickyStart) {
+			if (!fixedSidebar.find('.aside-wrapper__static').length){
+				fixedSidebar.append(menuClone);
+				menu.hide();
+			} 
+		} else {
+				fixedSidebar.find('.aside-wrapper__static').remove();
+				menu.show();
+			}
+	});
+
 })();

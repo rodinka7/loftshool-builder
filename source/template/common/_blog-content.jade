@@ -1,14 +1,20 @@
-.blog-wrapper.clearfix
+.blog-wrapper.fixed-wrapper
+	aside.aside-wrapper
+
+	section.blog-content
+
+.blog-wrapper.static.clearfix
 	aside.aside-wrapper#aside.clearfix
-		ul.aside-wrapper__list
-			li.aside-wrapper__item
-				a.aside-wrapper__link(href='#article_1') Самое важное в CSS
-			li.aside-wrapper__item
-				a.aside-wrapper__link(href='#article_2') Приемы в верстке, без которых не обойдется ни один сайт
-			li.aside-wrapper__item
-				a.aside-wrapper__link(href='#article_3') Самый необходимый набор Галп плагинов
-			li.aside-wrapper__item
-				a.aside-wrapper__link(href='#article_4') ПОчему я выбрал Jade
+		.aside-wrapper__static
+			ul.aside-wrapper__list
+				li.aside-wrapper__item
+					a.aside-wrapper__link(href='#article_1') Самое важное в CSS
+				li.aside-wrapper__item
+					a.aside-wrapper__link(href='#article_2') Приемы в верстке, без которых не обойдется ни один сайт
+				li.aside-wrapper__item
+					a.aside-wrapper__link(href='#article_3') Самый необходимый набор Галп плагинов
+				li.aside-wrapper__item
+					a.aside-wrapper__link(href='#article_4') ПОчему я выбрал Jade
 	section.blog-content.clearfix
 		article.blog-content__article#article_1
 			.article__header Самое важное в CSS
