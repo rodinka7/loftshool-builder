@@ -3,12 +3,14 @@ html
 	include _head-my
 	body
 		.head__table
+			.head__table_background
+				img(src="assets/img/water.jpg")
+
 			header.head__table-head
 				include _socials
-				.menu_button
-					input(type="checkbox")#menu_checkbox
-					label(for="menu_checkbox")#label__menu
-						span
+				include _menu
+			.head__table_bg
+				img.bg-img(src="assets/img/portfolio_header.svg")
 			.head__table-content
 				.container__img-wrapper
 					img.container__img(src="assets/img/my-photo.jpg")
@@ -20,5 +22,4 @@ html
 			a.arrow-down(href="#")
 				img.arrow-down__img(src='assets/img/portf_arrow_down.svg')			
 
-		include _menu
 		block content
