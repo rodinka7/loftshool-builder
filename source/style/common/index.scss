@@ -80,23 +80,7 @@ header{
 		height:140px;
 		overflow:hidden;
 	}
-	&__header {
-		font-size:28px;
-		color:#ffffff;
-		font-family:'robotomedium';
-		@include phones{
-			font-size:21px;
-		}
-	}
-	&__info {
-		color:#8f9191;
-		margin-bottom:35px;
-		font-family:'robotomedium';
-		@include phones{
-			font-size:14px;
-			margin-bottom:20px;
-		}
-	}
+	
 	&__socials-wrapper {
 		display:inline-block;	
 		margin:0;
@@ -202,6 +186,23 @@ header{
 	}
 	&__menu-item.autorization {
 		width:49%;
+	}
+}
+.container__header {
+	font-size:28px;
+	color:#ffffff;
+	font-family:'robotomedium';
+	@include phones{
+		font-size:21px;
+	}
+}
+.container__info {
+	color:#8f9191;
+	margin-bottom:35px;
+	font-family:'robotomedium';
+	@include phones{
+		font-size:14px;
+		margin-bottom:20px;
 	}
 }
 .question{

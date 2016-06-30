@@ -246,7 +246,7 @@ html{
 			width:370px;
 			font-family:'robotoitalic';
 			&:first-child{
-				margin-right:20px;
+				margin-right:50px;
 				@include tablets{
 					margin:0 auto 30px;
 				}
@@ -280,7 +280,6 @@ html{
 	}
 }
 .contact-me{
-	padding-top:40px;
 	width:380px;
 	margin:auto;
 	margin-bottom:25px;
@@ -291,6 +290,18 @@ html{
 	overflow:hidden;
 	@include phones{
 		width:300px;
+	}
+	&__form{
+		z-index:5;
+	}
+	.blur{
+		width:100%;
+		height:100%;
+		//filter: blur(20px);
+		//-webkit-filter: blur(20px);
+		background-image: url("../img/about.jpg");
+		background-position: center center;
+		background-repeat: no-repeat; 
 	}
 	&__header{
 		text-transform:uppercase;

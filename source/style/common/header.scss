@@ -2,17 +2,17 @@
 .head__table {
 	height:100vh;
 	min-height:650px;
-	width:100%;
 	position:relative;
+	width:100%;
 	overflow:hidden;
-
 	&_background{
 		position:absolute;
 		top: 0;
 		right: 0;
 		left: 0;
 		bottom: 0;
-		& img{
+		min-width:2000px;
+		img{
 			display:block;
 			max-width:100%;
 		}
@@ -25,13 +25,11 @@
 		width:100%;
 	}
 	&-content {
-		width:380px;
-		height:250px;
 		position:absolute;
 		top:50%;
-		left:50%;
-		margin-top:-125px;
-		margin-left:-190px;
+		left:0;
+		right:0;
+		transform:translateY(-50%);
 		text-align:center;
 	}
 	&_bg{
@@ -58,6 +56,9 @@
 		margin-bottom:-5px;
 	}
 }
+.block-wrapper{
+	display:inline-block;
+}
 .container__info.works {
 	color:#ffffff;
 	font-size:16px;
@@ -72,6 +73,9 @@
 	z-index:5;
 	&:hover{
 		opacity:1;
+	}
+	@include phones{
+		left:45%;
 	}
 }
 .polygon {
