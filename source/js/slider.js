@@ -1,34 +1,49 @@
 (function(){
 	'use strict';
 	
-	var counter = 1;
+	var counter = 0;
 
 	$('.slider__controls-item_prev').on('click', function(e){
 		e.preventDefault();
 
 		var $this = $(this),
-			container = $this.closest('.slider__controls-item_prev'),
-			images = container.find('.slider__img'),
-			activeImg = container.find('.slider__img.active'),
+			container = $this.closest('.slider__controls'),
+			imgPrev = container.find('.slider__controls-item_prev').find('.slider__img'),
+			imgNext = container.find('.slider__controls-item_next').find('.slider__img'),
+			activeImgPrev = imgPrev.filter('.active'),
+			activeImgNext = imgNext.filter('.active'),
 			slider = $this.closest('.slider'),
 			display = slider.find('.slider__display').find('.slider__img'),
 			text = slider.find('.about-me__header'),
 			skills = slider.find('.works__skills-info'); 
 
-		if (counter >= images.length) {
+		if (counter >= imgPrev.length) {
 			counter = 0;
 		};
-		
-		var reqImg = images.eq(counter),
+	
+		var reqImgPrev = imgPrev.eq(counter-1),
+			reqImgNext = imgNext.eq(counter+1),
+			reqImg = imgPrev.eq(counter), 
 			path = reqImg.attr('src');
+		
 
-		activeImg.animate({
+		activeImgPrev.animate({
 			'top': '200%'
 		},300);
-		reqImg.animate({
+		reqImgPrev.animate({
 			'top': '0'
 		},300, function() {
-			activeImg.removeClass('active').css('top', '0');
+			activeImgPrev.removeClass('active').css('top', '0');
+			$(this).addClass('active');
+		});
+
+		activeImgNext.animate({
+			'top': '200%'
+		},300);
+		reqImgNext.animate({
+			'top': '0'
+		},300, function() {
+			activeImgNext.removeClass('active').css('top', '0');
 			$(this).addClass('active');
 		});
 
@@ -40,35 +55,54 @@
 		counter++;
 	});
 
-	$('.slider__controls-item_next').on('click', function(e){
+$('.slider__controls-item_next').on('click', function(e){
 		e.preventDefault();
 
 		var $this = $(this),
-			container = $this.closest('.slider__controls-item_next'),
-			images = container.find('.slider__img'),
-			activeImg = container.find('.slider__img.active'),
-			display = $this.closest('.slider').find('.slider__display').find('.slider__img'); 
+			container = $this.closest('.slider__controls'),
+			imgPrev = container.find('.slider__controls-item_prev').find('.slider__img'),
+			imgNext = container.find('.slider__controls-item_next').find('.slider__img'),
+			activeImgPrev = imgPrev.filter('.active'),
+			activeImgNext = imgNext.filter('.active'),
+			slider = $this.closest('.slider'),
+			display = slider.find('.slider__display').find('.slider__img'),
+			text = slider.find('.about-me__header'),
+			skills = slider.find('.works__skills-info'); 
 
-		if (counter >= images.length) {
+		if (counter >= imgPrev.length) {
 			counter = 0;
 		};
-		
-		var reqImg = images.eq(counter),
+	
+		var reqImgPrev = imgPrev.eq(counter-1),
+			reqImgNext = imgNext.eq(counter+1),
+			reqImg = imgPrev.eq(counter), 
 			path = reqImg.attr('src');
+		
 
-		activeImg.animate({
-			'top': '-200%'
+		activeImgPrev.animate({
+			'top': '200%'
 		},300);
-		reqImg.animate({
+		reqImgPrev.animate({
 			'top': '0'
 		},300, function() {
-			activeImg.removeClass('active').css('top', '0');
+			activeImgPrev.removeClass('active').css('top', '0');
+			$(this).addClass('active');
+		});
+
+		activeImgNext.animate({
+			'top': '200%'
+		},300);
+		reqImgNext.animate({
+			'top': '0'
+		},300, function() {
+			activeImgNext.removeClass('active').css('top', '0');
 			$(this).addClass('active');
 		});
 
 		display.fadeOut(function() {
 			$(this).attr('src', path).fadeIn();
 		});
+		
 
 		counter++;
 	});

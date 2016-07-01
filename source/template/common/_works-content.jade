@@ -1,3 +1,4 @@
+script(src="assets/js/blur.js" defer)
 section.works
 	.works__head мои работы
 		.works__line 
@@ -17,14 +18,14 @@ section.works
 			.slider__controls
 				a(href="").slider__controls-item.slider__controls-item_prev
 					img.slider__img.active(src="assets/img/1.png" alt="")
-					img.slider__img(src="assets/img/4.png" alt="")
-					img.slider__img(src="assets/img/3.png" alt="")
 					img.slider__img(src="assets/img/2.png" alt="")
-				a(href="").slider__controls-item.slider__controls-item_next
-					img.slider__img.active(src="assets/img/3.png" alt="")
+					img.slider__img(src="assets/img/3.png" alt="")
 					img.slider__img(src="assets/img/4.png" alt="")
+				a(href="").slider__controls-item.slider__controls-item_next
 					img.slider__img(src="assets/img/1.png" alt="")
 					img.slider__img(src="assets/img/2.png" alt="")
+					img.slider__img.active(src="assets/img/3.png" alt="")
+					img.slider__img(src="assets/img/4.png" alt="")
 section.about
 	.about__head 
 		.about__head_inside что обо мне
@@ -46,17 +47,17 @@ section.about
 						span Зар Захаров
 			.contact-me.clearfix
 				.blur
-					.contact-me__header связаться со мной
-					.contact-me__line 
-					form.contact-me__form 
-						input.contact-me__input.name(type="text" value="имя")
-						input.contact-me__input.email(type="email" value="Email")
-						textarea.contact-me__textarea(cols="30", rows="10", value="Связаться со мной") Ваше сообщение
-					.contact-me__wrapper
-						ul.contact-me__list
-							li.contact-me__item
-								a.contact-me__link(href='№') Отправить	
-							li.contact-me__item
-								a.contact-me__link(href='#') Очистить
+				.contact-me__header связаться со мной
+				.contact-me__line 
+				form.contact-me__form 
+					input.contact-me__input.name(type="text" value="имя")
+					input.contact-me__input.email(type="email" value="Email")
+					textarea.contact-me__textarea(cols="30", rows="10", value="Связаться со мной") Ваше сообщение
+				.contact-me__wrapper
+					ul.contact-me__list
+						li.contact-me__item
+							a.contact-me__link(href='№') Отправить	
+						li.contact-me__item
+							a.contact-me__link(href='#') Очистить
 	
 	include footer

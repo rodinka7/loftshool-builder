@@ -5,6 +5,5 @@ module.exports = [
   './source/js/map.js',
   './source/js/menu.js',
   './source/js/slider.js',
-  './source/js/parallax.js',
-  './source/js/blur.js'
+  './source/js/parallax.js'
 ];
