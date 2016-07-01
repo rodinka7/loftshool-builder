@@ -7,7 +7,7 @@
   $(window).on('load', function () {
     var $preloader = $('#page-preloader');
     
-    $preloader.delay(1000).fadeOut('slow');
+    $preloader.delay(500).fadeOut('slow');
   });
   //Preloader-end
 
@@ -26,5 +26,15 @@
           transform = document.getElementById('transform');
       transform.classList.toggle('hover');      
   });
+
+  $('#arrow').on('click', function(e){
+    e.preventDefault();
+    
+    var reqScroll = $('.head__table').height();
+    console.log(reqScroll);
+    $('html, body').animate({
+      scrollTop: reqScroll
+    },1000); 
+  })
   
 })();

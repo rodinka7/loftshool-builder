@@ -30,7 +30,6 @@ $.gulp.task('default', $.gulp.series(
     'aside.process',
     'blur.process',
     'svg.process',
-    'scroll.process',
     'copy.image',
     'css.foundation',
     'svg-sprite'

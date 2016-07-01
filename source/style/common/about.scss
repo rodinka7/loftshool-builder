@@ -45,9 +45,11 @@
 		&_right-block{
 			width:50%;
 			float:right;
+			padding-right:2%;
 			@include tablets{
 				float:none;
 				width:65%;
+				padding:0;
 				margin:auto;
 			}
 			@include desktop{

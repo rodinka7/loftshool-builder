@@ -22,7 +22,7 @@
 		color:#ffffff;
 		text-transform:uppercase;
 		&:hover+.menu-color__line{
-			display:block;
+			visibility:visible;
 		}
 		@include tablets{
 			font-size:49px;
@@ -36,7 +36,7 @@
 		height:4px;
 		background:#ffffff;
 		margin:auto;
-		display:none;
+		visibility:hidden;
 
 	}
 }

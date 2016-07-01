@@ -21,8 +21,8 @@
 			counter = 0;
 		};
 	
-		var reqImgPrev = imgPrev.eq(counter-1),
-			reqImgNext = imgNext.eq(counter+1),
+		var reqImgPrev = imgPrev.eq(counter+1),
+			reqImgNext = imgNext.eq(counter-1),
 			reqImg = imgPrev.eq(counter), 
 			path = reqImg.attr('src');
 		

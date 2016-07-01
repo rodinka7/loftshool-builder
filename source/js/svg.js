@@ -13,7 +13,7 @@ $(window).scroll(function() {
           svgGit = $('.git'),
           svgGulp = $('.gulp'),
           svgBower = $('.bower'),
-          svgPos = $('.about-me__skills').offset().top,
+          svgPos = $('.about-me').offset().top,
           windowMargin = $(window).height()/3,
           startAnimate = wscroll - svgPos + windowMargin,
           pixelsElapsed = svgPos - wscroll,
