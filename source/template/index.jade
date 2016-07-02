@@ -29,16 +29,13 @@ html
 						.container-autorization__header авторизуйтесь
 						.container-autorization__line 
 						form.container-autorization__form 
-							.container__input_wrapper
-								label(for="input_login").input_login
-									.svg-login
-								input.container__input#input_login(type="text" placeholder="Логин")
-							.container__input_wrapper
-								label(for="input_password").input_password
-									.svg-password
-								input.container__input#input_password(type="password" placeholder="пароль")
-							input#container-autorization__man.container__checkbox(type="checkbox")
-							label.container-label.man(for="container-autorization__man") Я человек
+							.svg-login			
+							input.container__input#input_login(type="text" placeholder="Логин")
+							.svg-password
+							input.container__input#input_password(type="password" placeholder="Пароль")
+							.input-wrapper
+								input#container-autorization__man.container__checkbox(type="checkbox")
+								label.container-label.man(for="container-autorization__man") Я человек
 							.question Вы точно не робот?
 							input#container-autorization__yes.container__checkbox(type="radio")
 							label.container-label.yes(for="container-autorization__yes") Да

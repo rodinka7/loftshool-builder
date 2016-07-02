@@ -154,23 +154,25 @@ header{
 		height:4px;
 		background:#ffffff;
 		display:inline-block;
-		margin-bottom:30px;
+		margin-bottom:15px;
 		@include phones{
-			margin-bottom:20px;
+			margin-bottom:10px;
 		}
 	}
+	
 	&__input{
-		width:295px;
+		width:340px;
 		height:45px;
-		border-radius:0 25px 25px 0;
+		border-radius:25px;;
 		padding-left:20px;
 		color:#8f9191;
 		font-family:'robotomedium';
-		outline:none;
-		border:none;
-		&_wrapper{
-			margin:0 auto 20px;
-		}
+		background-clip: padding-box;
+    	border-left-width: 45px;
+    	border-top: none;
+    	border-bottom: none;
+    	border-right: none;
+    	margin:0 auto 30px;
 		@include phones{
 			width:225px;
 			font-size:14px;
@@ -209,32 +211,24 @@ header{
 	}
 }
 .question{
-			font-family:'robotobold';
-			color:#ffffff;
-			margin:25px auto 15px;
-		}
-/*Inputs*/
-.input_login, .input_password{
-	width:45px;
-	height:46px;
-	background-color:#f0efea;
-	border-radius:25px 0 0 25px;
-	display:inline-block;
-	position:relative;
-	top:17px;
-	left:8px;
-	border:1px solid #8f9191;
-	@include phones{
-		top:19px;
-	}
+	font-family:'robotobold';
+	color:#ffffff;
+	margin:25px auto 15px;
 }
-.svg-login,.svg-password{
+.input-wrapper{
+	display:block;
+}
+.svg-login, .svg-password{
+	position:relative;
 	width:25px;
 	height:25px;
-	position:absolute;
-	top:10px;
-	left:10px;
+	top:35px;
+	left:30px;
+	@include phones{
+		left:45px;
+	}
 }
+
 /*Check-boxes*/
 #container-autorization__man, #container-autorization__yes,
 #container-autorization__no{
@@ -246,14 +240,17 @@ label.container-label.man:before{
 	height:20px;
 	border:0.5px solid #4e8839;
 	border-radius:5px;
-	background:#ffffff;
+	background:#608c53;
 	position:absolute;
 	top:0;
 	left:-40px;
 	cursor:pointer;
 }
 input#container-autorization__man:checked + label.container-label.man:before{
-	background: url("../view/svg/sprite.view.svg") 94.03303748798462% 73.12624916722186% no-repeat;
+	background-image: url("../view/svg/sprite.view.svg");
+	background-repeat:no-repeat;
+	background-position: 93.03303748798462% 73.12624916722186%;
+	background-color:#608c53;
 	width:20px;
 	height:20px;
 }

@@ -1,7 +1,10 @@
 (function() {
   'use strict';
   
-  var wscroll = $(window).scrollTop();
+  var wscroll = $(window).scrollTop(),
+      inputBorder = $('.container__input');
+
+  inputBorder.css({'border-color': '#8f9191'}); 
 
   //Preloader
   $(window).on('load', function () {

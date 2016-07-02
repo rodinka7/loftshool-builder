@@ -21,8 +21,8 @@
 			counter = 0;
 		};
 	
-		var reqImgPrev = imgPrev.eq(counter+1),
-			reqImgNext = imgNext.eq(counter-1),
+		var reqImgPrev = imgPrev.eq(counter-1),
+			reqImgNext = imgNext.eq(counter+1),
 			reqImg = imgPrev.eq(counter), 
 			path = reqImg.attr('src');
 		
@@ -50,7 +50,20 @@
 		display.fadeOut(function() {
 			$(this).attr('src', path).fadeIn();
 		});
-		
+
+		if(counter === 0){
+			text.text('cайт школы Loftschool');
+			skills.text('html, css, javascript, php, node.js');
+		} else if (counter === 1){
+			text.text('cайт портфолио');
+			skills.text('html, css, javascript, php, gulp');
+		} else if (counter === 2){
+			text.text('cайт стоматологической клиники "Denta"');
+			skills.text('html, css, javascript, node.js');
+		} else {
+			text.text('cайт студии танца "Мечта"');
+			skills.text('html, css, javascript, node.js, gulp')
+		}
 
 		counter++;
 	});
@@ -103,6 +116,19 @@ $('.slider__controls-item_next').on('click', function(e){
 			$(this).attr('src', path).fadeIn();
 		});
 		
+		if(counter === 0){
+			text.text('cайт школы Loftschool');
+			skills.text('html, css, javascript, php, node.js');
+		} else if (counter === 1){
+			text.text('cайт портфолио');
+			skills.text('html, css, javascript, php, gulp');
+		} else if (counter === 2){
+			text.text('cайт стоматологической клиники "Denta"');
+			skills.text('html, css, javascript, node.js');
+		} else {
+			text.text('cайт студии танца "Мечта"');
+			skills.text('html, css, javascript, node.js, gulp')
+		}
 
 		counter++;
 	});

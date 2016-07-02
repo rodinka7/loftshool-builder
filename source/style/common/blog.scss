@@ -16,14 +16,17 @@
 	&#aside{
 		@include tablets{
 		background:#4e8839;
-		width:60%;
-		height:350px;
+		width:40%;
+		height:100vh;
 		padding:40px 0;
 		border-radius:0 10px 10px 0;
 		position:fixed;
-		top:30%;
+		top:0;
 		left:-60%;
 		z-index:15;
+		}
+		@include phones{
+			width:60%;
 		}
 	}	
 }
@@ -60,6 +63,7 @@
 	}
 	@include tablets{
 		color:#ffffff;
+		font-weight:normal;
 		&:hover{
 			color:#ffffff;
 		}
@@ -139,4 +143,7 @@
 .activeLink{
 		color:#4e8839;
 		font-weight:bold;
+		@include tablets{
+			color:#ffffff;
+		}
 	}
