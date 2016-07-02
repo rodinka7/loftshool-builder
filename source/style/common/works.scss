@@ -16,12 +16,12 @@ html{
 	}
 	padding:50px 0 100px;
 	}
-	&__line{
-		width:90px;
-		height:4px;
-		background:#373e42;
-		margin:30px auto;
-	}
+}
+.works__line{
+	width:90px;
+	height:4px;
+	background:#373e42;
+	margin:30px auto;
 }
 .slider {
 	width:100%;
@@ -231,7 +231,7 @@ html{
 		background:url(../img/about.jpg) top center no-repeat;
 		background-size:cover;
 		padding-bottom:185px;
-		
+		position:relative;
 		@include tablets{
 			padding-bottom:270px;
 		}
@@ -385,9 +385,100 @@ html{
 		}
 	}
 	&__link{
-		display:block;
-		text-decoration:none;
+		width:100%;
+		background-color:#608c53;
 		color:#ffffff;
 		font-family:'robotomedium';
+		cursor:pointer;
+		border:none;
+		&:hover{
+			background:#659753;
+		}
 	}
 }
+.formPopup{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:rgba(108, 156, 90, 0.5);
+	top:0;
+	left:0;
+	z-index:2;
+	visibility:hidden;
+	&__wrapper{
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		width:550px;
+		padding:20px;
+		border:1px solid #ffffff;
+		border-radius:15px;
+		position:relative;
+		background:#ffffff;
+		@include tablets{
+			width:270px;
+		}
+	}
+	&__close{
+		display:block;
+		cursor:pointer;
+		width:40px;
+		height:40px;
+		position:absolute;
+		right:10px;
+		top:10px;
+		@include tablets{
+			width:23px;
+			height:23px;
+		}
+	}
+	span{
+		width:30px;
+		height:4px;
+		background-color:#373e42;
+		border-radius:5px;
+		transform-origin:100% 0;
+		transform:rotate(-45deg);
+		display:block;
+		position:relative;
+		@include tablets{
+			width:20px;
+			height:3px;
+		}
+		&:after{
+			content:'';
+			width:30px;
+			height:4px;
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:3;
+			@include tablets{
+				width:20px;
+				height:3px;
+			}
+		}
+		
+	}
+	&__message{
+		color:#373e42;
+		font-family:'robotomedium';
+		font-size:21px;
+		text-transform:uppercase;
+		@include tablets{
+			font-size:16px;
+		}
+	}
+}
+.span-line:after{
+			width:30px;
+			height:4px;
+			background-color:#373e42;
+			border-radius:5px;
+			transform:rotate(-90deg);
+			@include tablets{
+				width:20px;
+				height:3px;
+			}
+		}

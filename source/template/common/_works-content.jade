@@ -9,7 +9,7 @@ section.works
 					img.slider__img(src="assets/img/2.png" alt="")
 
 				.about-me__header сайт школы онлайн <br>образования
-					.works__line
+				.works__line
 				.works__skills-info html, css, javascript
 				.works__site 
 					a.works__url(href="#") Посмотреть сайт
@@ -32,6 +32,16 @@ section.about
 		.about__head_inside говорят
 		.works__line
 	section.about__review
+			.formPopup#success
+				.formPopup__wrapper
+					a.formPopup__close
+						span.span-line
+					.formPopup__message ваше сообщение успешно отправлено!
+			.formPopup#fail
+				.formPopup__wrapper
+					a.formPopup__close
+						span.span-line
+					.formPopup__message пожалуйста, заполните все поля формы!
 			.about__wrapper
 				.about__wrapper-comment
 					.about__wrapper-img
@@ -53,15 +63,15 @@ section.about
 				.blur
 				.contact-me__header связаться со мной
 				.contact-me__line 
-				form.contact-me__form 
-					input.contact-me__input.name(type="text" placeholder="имя")
-					input.contact-me__input.email(type="email" placeholder="Email")
-					textarea.contact-me__textarea(cols="30", rows="10", placeholder="Связаться со мной")
+				form(name="feedback" method="post").contact-me__form 
+					input.contact-me__input.name(type="text" placeholder="имя" name="name")
+					input.contact-me__input.email(type="email" placeholder="Email" name="email")
+					textarea.contact-me__textarea(cols="30" rows="10" placeholder="Связаться со мной" name="textarea")
 				.contact-me__wrapper
 					ul.contact-me__list
 						li.contact-me__item
-							a.contact-me__link(href='№') Отправить	
+							input(type="submit" value="Отправить").contact-me__link#submit
 						li.contact-me__item
-							a.contact-me__link(href='#') Очистить
+							input(type="reset" value="Очистить").contact-me__link#reset
 	
 	include footer

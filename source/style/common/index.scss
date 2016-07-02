@@ -369,3 +369,13 @@ footer {
 			font-size:14px;
 		}
 }
+.loginMe{
+	display:block;
+	width:100%;
+	border:none;
+	background-color:#608c53;
+	cursor:pointer;
+	&:hover{
+		background:#659753;
+	}
+}
