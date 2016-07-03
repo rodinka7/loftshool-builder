@@ -7,6 +7,7 @@
   inputBorder.css({'border-color': '#8f9191'}); 
 
   //Preloader
+  
   $(window).on('load', function () {
     var $preloader = $('#page-preloader');
     

@@ -76,6 +76,8 @@
 	z-index:5;
 	&:hover{
 		opacity:1;
+		transform:translate(0, 20px);
+		transition:1s;
 	}
 	@include phones{
 		left:45%;

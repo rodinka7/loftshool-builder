@@ -1,7 +1,7 @@
 {
-  "name": "loftschool-builder",
+  "name": "portfolio",
   "version": "1.0.0",
-  "author": "a.kalin",
+  "author": "t.voitovich",
   "license": "ISC",
   "scripts": {
     "postinstall": "bower install"
@@ -25,5 +25,18 @@
   },
   "dependencies": {
     "normalize.css": "^4.1.1"
-  }
+  },
+  "description": "Getting started:",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodinka7/loftshool-builder.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "bugs": {
+    "url": "https://github.com/rodinka7/loftshool-builder/issues"
+  },
+  "homepage": "https://github.com/rodinka7/loftshool-builder#readme"
 }

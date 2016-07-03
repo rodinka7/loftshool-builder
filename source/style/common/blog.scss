@@ -41,6 +41,9 @@
 	top:0;
 	left:0;
 	right:0;
+	@include tablets{
+		transform:translate3d(0, 20%, 0);
+	}
 
 }
 .aside-wrapper__item{
@@ -50,6 +53,9 @@
 	cursor:pointer;
 	&:hover{
 		border-right:2px solid #4e8839;
+	}
+	@include tablets {
+		margin-bottom: 60px;
 	}
 }
 .aside-wrapper__link{
