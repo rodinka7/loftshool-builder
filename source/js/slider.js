@@ -52,16 +52,16 @@
 		});
 
 		if(counter === 0){
-			text.text('cайт школы Loftschool');
+			text.text('1. cайт школы Loftschool');
 			skills.text('html, css, javascript, php, node.js');
 		} else if (counter === 1){
-			text.text('cайт портфолио');
+			text.text('2. cайт школы онлайн образования');
 			skills.text('html, css, javascript, php, gulp');
 		} else if (counter === 2){
-			text.text('cайт стоматологической клиники "Denta"');
+			text.text('3. cайт стоматологической клиники "Denta"');
 			skills.text('html, css, javascript, node.js');
 		} else {
-			text.text('cайт студии танца "Мечта"');
+			text.text('4. cайт студии танца "Мечта"');
 			skills.text('html, css, javascript, node.js, gulp')
 		}
 
@@ -70,7 +70,7 @@
 
 $('.slider__controls-item_next').on('click', function(e){
 		e.preventDefault();
-
+		
 		var $this = $(this),
 			container = $this.closest('.slider__controls'),
 			imgPrev = container.find('.slider__controls-item_prev').find('.slider__img'),
@@ -117,20 +117,19 @@ $('.slider__controls-item_next').on('click', function(e){
 		});
 		
 		if(counter === 0){
-			text.text('cайт школы Loftschool');
+			text.text('1. cайт школы Loftschool');
 			skills.text('html, css, javascript, php, node.js');
 		} else if (counter === 1){
-			text.text('cайт портфолио');
+			text.text('2. cайт школы онлайн образования');
 			skills.text('html, css, javascript, php, gulp');
 		} else if (counter === 2){
-			text.text('cайт стоматологической клиники "Denta"');
+			text.text('3. cайт стоматологической клиники "Denta"');
 			skills.text('html, css, javascript, node.js');
 		} else {
-			text.text('cайт студии танца "Мечта"');
+			text.text('4. cайт студии танца "Мечта"');
 			skills.text('html, css, javascript, node.js, gulp')
 		}
 
 		counter++;
 	});
-
 })();
