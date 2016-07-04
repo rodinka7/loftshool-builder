@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  
+
   var wscroll = $(window).scrollTop(),
       inputBorder = $('.container__input');
 

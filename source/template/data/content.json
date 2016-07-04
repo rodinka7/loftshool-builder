@@ -1,0 +1,29 @@
+{
+	"works":{
+		"work1":{
+			"name": "1. cайт школы Loftschool",
+			"description": "html, css, javascript, php, node.js",
+			"link": "#",
+			"img": "assets/img/1.png"
+		},
+		"work2":{
+			"name": "2. cайт школы онлайн образования",
+			"description": "html, css, javascript, php, gulp",
+			"link": "#",
+			"img": "assets/img/2.png"
+		},
+		"work3":{
+			"name": "3. cайт стоматологической клиники 'Denta'",
+			"description": "html, css, javascript, node.js",
+			"link": "#",
+			"img": "assets/img/3.png"
+		},
+		"work4":{
+			"name": "4. cайт студии танца 'Мечта'",
+			"description": "html, css, javascript, node.js, gulp",
+			"link": "#",
+			"img": "assets/img/4.png"
+		}
+
+	}
+}
