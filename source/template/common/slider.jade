@@ -14,7 +14,7 @@ section.slider.clearfix
 			.slider__controls
 				a(href="").slider__controls-item.slider__controls-item_prev
 					each work, id in works
-						img.slider__img(src=work.img alt=work.name data-name=work.name data-description=work.description)
+						img.slider__img(src=work.img alt=work.name data-name=work.name data-description=work.description data-id=id)
 				a(href="").slider__controls-item.slider__controls-item_next
 					each work,id in works
-						img.slider__img(src=work.img alt=work.name data-name=work.name data-description=work.description)
+						img.slider__img(src=work.img alt=work.name data-name=work.name data-description=work.description data-id=id)
