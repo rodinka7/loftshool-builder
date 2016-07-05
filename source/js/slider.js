@@ -3,18 +3,16 @@
 	
 	var counter = 0;
 
-	$(window).on('load', function(){
-		var itemPrev = $('.slider__controls-item_prev').find('.slider__img'), 
-			itemNext = $('.slider__controls-item_next').find('.slider__img');
-		
-		if (itemPrev.data('id') === 'work1'){
-			$(this).addClass('active');
-		};
+	var itemPrev = $('.slider__controls-item_prev').find('.slider__img'), 
+		itemNext = $('.slider__controls-item_next').find('.slider__img');
+		console.log('.slider__controls-item_prev');		
+	if (itemPrev.data('id') === 'work1'){
+		$(this).addClass('active');
+	};
 
-		if (itemNext.data('id') === 'work3'){
-			$(this).addClass('active');
-		};
-	});
+	if (itemNext.data('id') === 'work3'){
+		$(this).addClass('active');
+	};
 
 	$('.slider__controls-item_prev').on('click', function(e){
 		e.preventDefault();

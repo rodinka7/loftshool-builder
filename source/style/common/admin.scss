@@ -1,6 +1,6 @@
-.wrapper{
+.admin__wrapper{
 	width:100%;
-	height:100%;
+	height:auto;
 	position:relative;
 }
 .admin__bg{
@@ -100,6 +100,9 @@
 		&:hover{
 			background:#ffffff;
 		}
+		.active{
+			background:#ffffff;	
+		}
 	}
 	&__link{
 		color:#738085;
@@ -114,83 +117,84 @@
 		&:hover{
 			color:#00bfa5;
 		}
+		.active{
+			color:#00bfa5;
+		}
 	}
 	@include phones{
 		height:auto;
 	}	
 }
 .admin__content{
-	width:90%;
-	margin:auto;
+	width:100%;
 	padding-top:50px;
+	position:absolute;
+	top:60px;
+	left:0;
 	@include phones{
 		padding-top:30px;
+		top:180px;
 	}
 	&_header{
 		color:#738085;
 		font: 21px 'robotomedium';
-		margin-bottom:50px;
+		margin:0 0 50px 30px;
 		@include phones{
-			margin-bottom:30px;
+			margin:0 0 30px 10px;
 		}
 	}
 	&_block{
 		width:100%;
-	}
-}
-.admin__skills{
-	display:inline-block;
-	width:35%;
-	@include tablets{
-		width:100%;
-	}
-	.skills__head{
-		font:16px 'robotomedium';
-		color:#738085;
+		padding-left:30px;
 		@include phones{
-			font-size:14px;
-		}
-	}
-	.skills__list{
-		list-style:none;
-	}
-	.skills__item{
-		&_name{
-			font:16px 'robotomedium';
-			color:#738085;
-			display:inline-block;
-			width:110px;
-			margin-bottom:30px;
-			@include phones{
-				font-size:14px;
-			}
-		}
-		.skills__input{
-			width:45px;
-			height:35px;
-			margin-right:10px;
-			border-radius:5px;
-			border:none;
-			text-align:center;
-		}
-		.skills__label{
-			font:16px 'robotomedium';
-			color:#738085;
-			@include phones{
-				font-size:14px;
-			}
+			margin-left:20px;
 		}
 	}
 }
-.admin__skills_saveBtn{
-	padding-bottom:40px;
-	.save_btn{
-		width:115px;
-		height:40px;
-		background:#00bfa5;
-		color:#ffffff;
-		border-radius:10px;
-		border:none;
+#admin__about{
+	visibility:hidden;
+}
+#admin__blog{
+	visibility:hidden;
+}
+#admin__works{
+	visibility:hidden;
+}
+.blog__add-img{
+	margin-bottom:20px;
+	&_link{
+		color:#00bfa5;
+		text-decoration:none;
+		font:16px/35px 'robotomedium';
+		padding-left:50px;
+		position:relative;
 		cursor:pointer;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+	&_image{
+		position:absolute;
+		top:0;
+		left:0;
+	}
+}
+.admin__message{
+	width:280px;
+	height:110px;
+	background:#ffffff;
+	position:relative;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	z-index:2;
+	padding:20px;
+	border-radius:10px;
+	text-align:center;
+	box-shadow: 0 0 10px 5px rgba(197, 198, 199, 1);
+	.admin__message_text{
+		color:#738085;
+		font:14px 'robotomedium';
+		margin-bottom:20px;
 	}
 }

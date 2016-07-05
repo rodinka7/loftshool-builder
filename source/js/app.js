@@ -114,5 +114,26 @@
     }
 
     return valid; 
-  }  
+  };
 })();
+//Admin - переключение вкладок
+  $('#admin-about').on('click',function(e){
+    e.preventDefault();
+    var block = $('#admin__about');
+    console.log('#admin-about');
+    block.css({'visibility': 'visible'});
+  });
+
+  $('#admin-blog').on('click',function(e){
+    e.preventDefault();
+    var block = $('#admin__blog');
+    console.log(block);
+    block.css({'visibility': 'visible'});
+  });
+
+  $('#admin-works').on('click',function(e){
+    e.preventDefault();
+    var block = $('#admin__works');
+    console.log(block);
+    block.css({'visibility': 'visible'});
+  });

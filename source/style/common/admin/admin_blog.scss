@@ -1,0 +1,24 @@
+.blog-item{
+	display:block;
+	margin-bottom:20px;
+	padding-left:20px;
+	border:none;
+	border-radius:10px;
+	color:#aeb0b1;
+	font: 16px 'robotomedium';
+	@include phones{
+		font-size:14px;
+	}
+}
+.blog-input{
+	width:300px;
+	height:45px;
+}
+.blog-article{
+	width:500px;
+	height:170px;
+	padding-top:20px;
+	@include phones{
+		width:300px;
+	}
+}

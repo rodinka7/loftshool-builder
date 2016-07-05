@@ -2,49 +2,37 @@ doctype html
 html
 	include common/_head-my
 	body
-		wrapper
+		.admin__wrapper
 			.admin__bg
 				img.admin__bg_img(src="assets/img/water.jpg")
 			header.admin__head
 				.admin__head_header Панель администрирования
-				a.admin__head_link(href="index.html").clear Вернуться на сайт
+				a.admin__head_link(href="index.html") Вернуться на сайт
 			section.admin__main
 				section.tabs
 					ul.tabs__list
 						each tab, id in tabs
 							li.tabs__item 
-								a.tabs__link(href=tab.link) #{tab.title}
-				section.admin__content
-					.admin__content_header #{tabs.tab1.name}
+								a.tabs__link(href="#" id="#{tab.link}") #{tab.title}
+				section.admin__content#admin__about
+					include common/admin/_admin_about-me
+				section.admin__content#admin__blog
+					include common/admin/_admin_blog
+				section.admin__content#admin__works
+					.admin__content_header #{tabs.tab3.name}
 					section.admin__content_block
-						section.admin__skills
-							.skills__head #{scills.Frontend.name}
-							ul.skills__list
-								each scill, id in scills
-									li.skills__item
-										.skills__item_name #{scill.scill1}
-										label.skills__label
-											input(type="text").skills__input
-											|%
-						section.admin__skills
-							.skills__head #{scills.Workflow.name}
-							ul.skills__list
-								each scill, id in scills
-									li.skills__item
-										.skills__item_name #{scill.scill2}
-										label.skills__label
-											input(type="text").skills__input
-											|%
-						section.admin__skills
-							.skills__head #{scills.Backend.name}
-							ul.skills__list
-								each scill, id in scills
-									li.skills__item
-										.skills__item_name #{scill.scill3}
-										label.skills__label
-											input(type="text").skills__input
-											|%
+						.skills__head Добавить работу
+						input.blog-input.blog-item(type="text" placeholder="Название проекта")
+						input.blog-input.blog-item(type="text" placeholder="Технологии")
+						.blog__add-img
+							a.blog__add-img_link Загрузить картинку
+								img.blog__add-img_image(src="assets/img/add-img.png")
 						.admin__skills_saveBtn
-							input(type="button" value="Сохранить").save_btn
+							input(type="button" value="Добавить").save_btn
+					.admin__message#admin-message
+						.admin__message_text Сообщение отправлено
+						.admin__skills_saveBtn
+							input(type="button" value="Закрыть").save_btn
 
-
+					
+					

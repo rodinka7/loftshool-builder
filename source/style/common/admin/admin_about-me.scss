@@ -1,0 +1,58 @@
+.admin__skills{
+	display:inline-block;
+	width:35%;
+	@include tablets{
+		width:100%;
+	}
+	
+	.skills__list{
+		list-style:none;
+	}
+	.skills__item{
+		&_name{
+			font:16px 'robotomedium';
+			color:#738085;
+			display:inline-block;
+			width:110px;
+			margin-bottom:30px;
+			@include phones{
+				font-size:14px;
+			}
+		}
+		.skills__input{
+			width:45px;
+			height:35px;
+			margin-right:10px;
+			border-radius:5px;
+			border:none;
+			text-align:center;
+		}
+		.skills__label{
+			font:16px 'robotomedium';
+			color:#738085;
+			@include phones{
+				font-size:14px;
+			}
+		}
+	}
+}
+.skills__head{
+	font:16px 'robotomedium';
+	color:#738085;
+	margin-bottom:20px;
+	@include phones{
+		font-size:14px;
+	}
+}
+.admin__skills_saveBtn{
+	padding-bottom:40px;
+	.save_btn{
+		width:115px;
+		height:40px;
+		background:#00bfa5;
+		color:#ffffff;
+		border-radius:10px;
+		border:none;
+		cursor:pointer;
+	}
+}
