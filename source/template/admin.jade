@@ -1,0 +1,50 @@
+doctype html
+html
+	include common/_head-my
+	body
+		wrapper
+			.admin__bg
+				img.admin__bg_img(src="assets/img/water.jpg")
+			header.admin__head
+				.admin__head_header Панель администрирования
+				a.admin__head_link(href="index.html").clear Вернуться на сайт
+			section.admin__main
+				section.tabs
+					ul.tabs__list
+						each tab, id in tabs
+							li.tabs__item 
+								a.tabs__link(href=tab.link) #{tab.title}
+				section.admin__content
+					.admin__content_header #{tabs.tab1.name}
+					section.admin__content_block
+						section.admin__skills
+							.skills__head #{scills.Frontend.name}
+							ul.skills__list
+								each scill, id in scills
+									li.skills__item
+										.skills__item_name #{scill.scill1}
+										label.skills__label
+											input(type="text").skills__input
+											|%
+						section.admin__skills
+							.skills__head #{scills.Workflow.name}
+							ul.skills__list
+								each scill, id in scills
+									li.skills__item
+										.skills__item_name #{scill.scill2}
+										label.skills__label
+											input(type="text").skills__input
+											|%
+						section.admin__skills
+							.skills__head #{scills.Backend.name}
+							ul.skills__list
+								each scill, id in scills
+									li.skills__item
+										.skills__item_name #{scill.scill3}
+										label.skills__label
+											input(type="text").skills__input
+											|%
+						.admin__skills_saveBtn
+							input(type="button" value="Сохранить").save_btn
+
+

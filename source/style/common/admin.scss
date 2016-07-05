@@ -1,0 +1,196 @@
+.wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+.admin__bg{
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	overflow:hidden;
+	&_img{
+		max-width:100%;
+		filter:opacity(0.2);
+		min-width:1500px;
+		@include tablets{
+			min-width:1850px;
+		}
+		@include phones{
+			min-width:2000px;
+		}
+	}
+}
+.admin__head{
+	height:80px;
+	background:#00bfa5;
+	line-height:80px;
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+	@include phones{
+		line-height:30px;
+		text-align:center;
+	}
+	&_header{
+		color:#ffffff;
+		font-size:28px;
+		font-family:'robotomedium';
+		margin-left:30px;
+		display:inline-block;
+		@include tablets{
+			font-size:21px;
+		}
+		@include phones{
+			position:static;
+			margin:auto;
+		}
+	}
+	&_link{
+		color:#ffffff;
+		font-size:16px;
+		font-family:'robotomedium';
+		cursor:pointer;
+		text-decoration:none;
+		position:absolute;
+		right:0;
+		margin-right:30px;
+	
+		&:hover{
+			text-decoration:underline;
+		}
+		
+		@include phones{
+			font-size:14px;
+			position:static;
+			display:block;
+		}  
+	}
+}
+.admin__main{
+	position:absolute;
+	top:80px;
+	left:0;
+	width:100%;
+}
+.tabs{
+	height:60px;
+	width:100%;
+	background:#f0efe9;
+	
+	&__list{
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	&__item{
+		width:190px;
+		line-height:60px;
+		text-align:center;
+		border-right:1px solid #ffffff;
+		display:inline-block;
+		font-size:0;
+		@include phones{
+			width:100%;
+			border-bottom:2px solid #ffffff;
+			border-right:none;
+		}
+		&:hover{
+			background:#ffffff;
+		}
+	}
+	&__link{
+		color:#738085;
+		font:16px/60px 'robotomedium';
+		text-transform:uppercase;
+		text-decoration:none;
+		display:block;
+		cursor:pointer;
+		@include phones{
+			font-size:14px;
+		}
+		&:hover{
+			color:#00bfa5;
+		}
+	}
+	@include phones{
+		height:auto;
+	}	
+}
+.admin__content{
+	width:90%;
+	margin:auto;
+	padding-top:50px;
+	@include phones{
+		padding-top:30px;
+	}
+	&_header{
+		color:#738085;
+		font: 21px 'robotomedium';
+		margin-bottom:50px;
+		@include phones{
+			margin-bottom:30px;
+		}
+	}
+	&_block{
+		width:100%;
+	}
+}
+.admin__skills{
+	display:inline-block;
+	width:35%;
+	@include tablets{
+		width:100%;
+	}
+	.skills__head{
+		font:16px 'robotomedium';
+		color:#738085;
+		@include phones{
+			font-size:14px;
+		}
+	}
+	.skills__list{
+		list-style:none;
+	}
+	.skills__item{
+		&_name{
+			font:16px 'robotomedium';
+			color:#738085;
+			display:inline-block;
+			width:110px;
+			margin-bottom:30px;
+			@include phones{
+				font-size:14px;
+			}
+		}
+		.skills__input{
+			width:45px;
+			height:35px;
+			margin-right:10px;
+			border-radius:5px;
+			border:none;
+			text-align:center;
+		}
+		.skills__label{
+			font:16px 'robotomedium';
+			color:#738085;
+			@include phones{
+				font-size:14px;
+			}
+		}
+	}
+}
+.admin__skills_saveBtn{
+	padding-bottom:40px;
+	.save_btn{
+		width:115px;
+		height:40px;
+		background:#00bfa5;
+		color:#ffffff;
+		border-radius:10px;
+		border:none;
+		cursor:pointer;
+	}
+}
