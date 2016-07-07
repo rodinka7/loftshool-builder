@@ -3,28 +3,18 @@
 	
 	var counter = 0;
 
-	var itemPrev = $('.slider__controls-item_prev').find('.slider__img'), 
-		itemNext = $('.slider__controls-item_next').find('.slider__img');
-		console.log('.slider__controls-item_prev');		
-	if (itemPrev.data('id') === 'work1'){
-		$(this).addClass('active');
-	};
-
-	if (itemNext.data('id') === 'work3'){
-		$(this).addClass('active');
-	};
 
 	$('.slider__controls-item_prev').on('click', function(e){
 		e.preventDefault();
-		slider('down');
+		sliderWork('down');
 	});
 
 	$('.slider__controls-item_next').on('click', function(e){
 		e.preventDefault();
-		slider('up');
+		sliderWork('up');
 	});
 
-function slider(direction){
+function sliderWork(direction){
 			var	slider = $('.slider'), 
 			container = slider.find('.slider__controls'),
 			imgPrev = container.find('.slider__controls-item_prev').find('.slider__img'),
@@ -37,7 +27,7 @@ function slider(direction){
 			reqImgPrev,
 			reqImgNext;
 
-		if (counter >= imgPrev.length) {
+		if (counter >= imgPrev.length-1) {
 			counter = 0;
 		};
 		
@@ -53,8 +43,7 @@ function slider(direction){
 			name = reqImg.data('name'),
 			description = reqImg.data('description'),
 			path = reqImg.attr('src');
-		
-
+			
 		activeImgPrev.animate({
 			'top': '200%'
 		},300);
@@ -65,6 +54,7 @@ function slider(direction){
 			$(this).addClass('active');
 			text.text(name);
 			skills.text(description);
+			console.log(counter);
 		});
 
 		activeImgNext.animate({
@@ -77,6 +67,8 @@ function slider(direction){
 			$(this).addClass('active');
 			text.text(name);
 			skills.text(description);
+			console.log(counter);
+			console.log($(this));
 		});
 
 		display.fadeOut(function() {
@@ -84,5 +76,7 @@ function slider(direction){
 		});
 
 		counter++;
+		console.log(counter);
 };
+
 })();
