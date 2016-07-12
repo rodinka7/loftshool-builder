@@ -79,6 +79,9 @@
 		transform:translate(0, 20px);
 		transition:1s;
 	}
+	@include screen{
+		left:48%;
+	}
 	@include phones{
 		left:45%;
 	}

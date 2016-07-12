@@ -80,6 +80,10 @@ header{
 		height:140px;
 		overflow:hidden;
 	}
+	&__img{
+		width:140px;
+		height:auto;
+	}
 	
 	&__socials-wrapper {
 		display:inline-block;	
@@ -289,6 +293,7 @@ input#container-autorization__no:checked + label.container-label.no{
 /*Socials*/
 .social-icon{
 	color:#ffffff;
+	transition:color 0.3s;
 	&:hover{
 		color:#659753;
 	}

@@ -1,7 +1,11 @@
 @function rem($px){
 	@return $px/16px + 0rem; 
 }
-
+@mixin screen {
+	@media screen and (max-width:1366px){
+		@content;
+	}
+}
 @mixin desktop{
 	@media screen and (max-width:1200px){
 		@content;

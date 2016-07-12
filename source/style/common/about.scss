@@ -13,6 +13,9 @@
 		width:50%;
 		background:#ebefe2;
 		height:100vh;
+		@include screen {
+			height:auto;
+		}
 		@include tablets{
 			float:none;
 			width:100%;
@@ -117,10 +120,6 @@
 .map{
 	width:100%;
 	position:relative;
-}
-#map{
-	width:100%;
-	height:100vh;
 	padding-bottom:185px;
 	@include tablets {
 		padding-bottom:270px;
@@ -129,20 +128,24 @@
 		padding-bottom:350px;
 	}
 }
+#map{
+	width:100%;
+	height:100vh;
+}
 .my-contacts{
 	width:380px;
 	background:rgba(244, 245, 240,0.9);
 	text-align:center;
 	padding:35px;
 	position:absolute;
-	top:5%;
+	top:50%;
 	left:50%;
-	margin-left:-190px;
+	transform:translate(-50%, -50%);
 	z-index:1;
 	@include phones{
 		width:100%;
 		position:static;
-		margin:0;
+		transform:translate(0,0);
 	}
 	&__info{
 		font-size:16px;

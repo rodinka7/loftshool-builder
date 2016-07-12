@@ -10,7 +10,11 @@
 	&__list{
 		list-style:none;
 		text-align:center;
-		margin-top:10%;
+		padding-top:10%;
+		margin-left:-40px;
+		@include tablets{
+			padding-top:15%;
+		}
 	}
 	&__item{
 		margin-bottom:30px;
@@ -23,6 +27,7 @@
 		text-transform:uppercase;
 		&:hover+.menu-color__line{
 			visibility:visible;
+			transform:scaleX(2);
 		}
 		@include tablets{
 			font-size:49px;
@@ -32,12 +37,17 @@
 		}
 	}
 	&__line{
-		width:90px;
+		width:60px;
 		height:4px;
 		background:#ffffff;
 		margin:auto;
 		visibility:hidden;
-
+		transition:transform 0.5s;
+		-webkit-transition:transform 0.5s;
+		@include phones{
+			width:30px;
+			height:2px;
+		}
 	}
 }
 .menu-opened{
@@ -54,6 +64,10 @@
 	width:40px;
 	height:40px;
 	cursor:pointer;
+	@include phones{
+		width:25px;
+		height:25px;
+	}
 	&:before, &:after, span{
 		content:'';
 		float:left;
@@ -64,6 +78,10 @@
 		background:#ffffff;
 		margin-bottom:10px;
 		transition: all .3s ease;
+		@include phones{
+			height:3px;
+			margin-bottom:6px;
+		}
 	}
 	&:before,&:after{
 		transition: all .3s ease;

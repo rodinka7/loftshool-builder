@@ -7,11 +7,14 @@
   inputBorder.css({'border-color': '#8f9191'}); 
 
   //Preloader
-  
+  $(document).ready(function(){
+    $('body').css({'overflow': 'hidden'});
+  }) 
   $(window).on('load', function () {
     var $preloader = $('#page-preloader');
     
     $preloader.delay(500).fadeOut('slow');
+    $('body').css({'overflow': ''});
   });
   //Preloader-end
 
