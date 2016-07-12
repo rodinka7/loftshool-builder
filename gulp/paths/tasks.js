@@ -14,6 +14,7 @@ module.exports = [
   './gulp/tasks/svg.process.js',
   './gulp/tasks/js.lint.js',
   './gulp/tasks/copy.image.js',
-  './gulp/tasks/svg-sprite.js'
+  './gulp/tasks/svg-sprite.js',
+  './gulp/tasks/admin.process.js'
 ];
 

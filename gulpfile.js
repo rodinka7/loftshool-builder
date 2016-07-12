@@ -32,7 +32,8 @@ $.gulp.task('default', $.gulp.series(
     'svg.process',
     'copy.image',
     'css.foundation',
-    'svg-sprite'
+    'svg-sprite',
+    'admin.process'
   ),
   $.gulp.parallel(
     'watch',

@@ -41,10 +41,10 @@ section.about
 				.blur
 				.contact-me__header связаться со мной
 				.contact-me__line 
-				form(name="feedback" method="post").contact-me__form 
-					input.contact-me__input.name(type="text" placeholder="имя" name="name")
-					input.contact-me__input.email(type="email" placeholder="Email" name="email")
-					textarea.contact-me__textarea(cols="30" rows="10" placeholder="Связаться со мной" name="textarea")
+				form(name="feedback" method="post" id="contactForm").contact-me__form 
+					input.contact-me__input.name(type="text" placeholder="имя" name="name" id="contactName")
+					input.contact-me__input.email(type="email" placeholder="Email" name="email" id="contactEmail")
+					textarea.contact-me__textarea(cols="30" rows="10" placeholder="Связаться со мной" name="textarea" id="contactMess")
 				.contact-me__wrapper
 					ul.contact-me__list
 						li.contact-me__item
