@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "express": "^4.14.0",
+    "mongoose": "^4.5.4",
     "normalize.css": "^4.1.1"
   },
   "description": "Getting started:",
