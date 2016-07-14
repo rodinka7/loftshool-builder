@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
 	submit.addEventListener('click', function(){
 		var data = {
 			contactName: contactName.value,
@@ -12,4 +12,4 @@
 		xhr.send(JSON.stringify(data));
 	})
 
-})();
+})();*/

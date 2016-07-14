@@ -119,24 +119,41 @@
     return valid; 
   };
 })();
+
 //Admin - переключение вкладок
-  $('#admin-about').on('click',function(e){
-    e.preventDefault();
-    var block = $('#admin__about');
-    console.log('#admin-about');
-    block.css({'visibility': 'visible'});
-  });
+ var tabItems = $('.tabs__item'),
+     tabs = $('.admin__content');
 
-  $('#admin-blog').on('click',function(e){
-    e.preventDefault();
-    var block = $('#admin__blog');
-    console.log(block);
-    block.css({'visibility': 'visible'});
-  });
+  function changeTab() {
+    var hash = location.hash,
+        activeTab = tabs.filter(hash),
+        activeTabItem = tabItems.find('a').filter('[href="' + hash + '"]').parent();
 
-  $('#admin-works').on('click',function(e){
+    tabs.filter(':not(' + hash + ')').removeClass('activeAdminSection');
+
+    if (activeTab.length) {
+      activeTab.addClass('activeAdminSection');
+      tabItems.removeClass('activeAdminItem');
+      activeTabItem.addClass('activeAdminItem');
+    } else {
+      tabItems.eq(0).addClass('activeAdminItem');
+      tabs.eq(0).addClass('activeAdminSection');
+    }
+  }
+
+  $(window).on('hashchange', changeTab);
+  $(changeTab);
+
+  // Обработка кнопки 
+  $('.adminButton').on('click', function(e){
     e.preventDefault();
-    var block = $('#admin__works');
-    console.log(block);
-    block.css({'visibility': 'visible'});
+    
+    var btn = $('#admin-message'),
+        btnSave = btn.find('.save_btn'); 
+    btn.css('visibility', 'visible');
+
+    btnSave.on('click', function(e){
+      e.preventDefault();
+      btn.css('visibility', 'hidden');
+    });
   });

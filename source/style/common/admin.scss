@@ -100,9 +100,6 @@
 		&:hover{
 			background:#ffffff;
 		}
-		.active{
-			background:#ffffff;	
-		}
 	}
 	&__link{
 		color:#738085;
@@ -117,9 +114,6 @@
 		&:hover{
 			color:#00bfa5;
 		}
-		.active{
-			color:#00bfa5;
-		}
 	}
 	@include phones{
 		height:auto;
@@ -131,6 +125,7 @@
 	position:absolute;
 	top:60px;
 	left:0;
+	visibility:hidden;
 	@include phones{
 		padding-top:30px;
 		top:180px;
@@ -151,15 +146,7 @@
 		}
 	}
 }
-#admin__about{
-	visibility:hidden;
-}
-#admin__blog{
-	visibility:hidden;
-}
-#admin__works{
-	visibility:hidden;
-}
+
 .blog__add-img{
 	margin-bottom:20px;
 	&_link{
@@ -192,9 +179,20 @@
 	border-radius:10px;
 	text-align:center;
 	box-shadow: 0 0 10px 5px rgba(197, 198, 199, 1);
+	visibility:hidden;
 	.admin__message_text{
 		color:#738085;
 		font:14px 'robotomedium';
 		margin-bottom:20px;
 	}
 }
+.activeAdminSection{
+	background: rgba(255, 255, 255, 0.5);
+	visibility:visible;
+}
+.activeAdminItem{
+			background:#ffffff;	
+		}
+.activeAdminLink{
+			color:#00bfa5;
+		}

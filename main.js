@@ -1,7 +1,17 @@
 'use strict';
 var fs = require('fs'),
 	express = require('express'),
-	app = express();
+	app = express(),
+	mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/portfolio');
+
+var Post = mongoose.model('Post', {
+	title: String,
+	date: String,
+	text: String 
+});
+
 
 /*let fs = require('fs');
 let express = require('express');
@@ -72,7 +82,14 @@ app.post('/save', function(req, res){
 
 app.listen(9999);
 
-var MongoClient = require('mongodb').MongoClient;
+var post = new Post({
+	title: "Работа с MongoDb",
+	date: "15.07.2016",
+	text: "Как же сложно работать с базами данных! Сложно-сложно! Но у меня получится, непременно!!!" 
+});
+post.save();
+
+/*var MongoClient = require('mongodb').MongoClient;
 MongoClient.connect('mongodb://localhost:27017/portfolio', function(err, db){
 	if(err){
 		console.error(err);
@@ -85,4 +102,4 @@ MongoClient.connect('mongodb://localhost:27017/portfolio', function(err, db){
 		};
 		blogCollection.insert(post);
 	}
-});
+});*/

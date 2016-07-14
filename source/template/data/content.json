@@ -31,17 +31,20 @@
 		"tab1":{
 			"title": "Обо мне",
 			"name": "Страница 'ОБО МНЕ'",
-			"link": "admin-about"
+			"link": "admin-about",
+			"href": "#admin-about"
 		},
 		"tab2":{
 			"title": "Блог",
 			"name": "Страница 'БЛОГ'",
-			"link": "admin-blog"
+			"link": "admin-blog",
+			"href": "#admin-blog"
 		},
 		"tab3":{
 			"title": "Мои работы",
 			"name": "Страница 'МОИ РАБОТЫ'",
-			"link": "admin-works"
+			"link": "admin-works",
+			"href": "#admin-works"
 		}
 	},
 
