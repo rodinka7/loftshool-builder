@@ -33,7 +33,8 @@ $.gulp.task('default', $.gulp.series(
     'copy.image',
     'css.foundation',
     'svg-sprite',
-    'admin.process'
+    'admin.process',
+    'webgl.process'
   ),
   $.gulp.parallel(
     'watch',

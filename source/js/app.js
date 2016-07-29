@@ -145,7 +145,7 @@
   $(changeTab);
 
   // Обработка кнопки 
-  $('.adminButton').on('click', function(e){
+ /* $('.adminButton').on('click', function(e){
     e.preventDefault();
     
     var btn = $('#admin-message'),
@@ -156,4 +156,4 @@
       e.preventDefault();
       btn.css('visibility', 'hidden');
     });
-  });
+  });*/

@@ -2,7 +2,6 @@ doctype html
 html
 	include common/_head-my
 	body
-		//Не забыть дописать про обновление устаревшего браузера
 		#page-preloader
 		.wrapper
 			.formPopup#robot
@@ -25,7 +24,7 @@ html
 					a#autorize-link(href="#") Авторизоваться
 			
 			.wrapper-flipper
-				.flipper#transform
+				.flipper#transforma
 					.container.clearfix
 						.container__img-wrapper
 							img.container__img(src="assets/img/my-photo.jpg")
@@ -62,5 +61,6 @@ html
 									a.container__menu-link#main(href='welcome.html') На главную	
 								li.container__menu-item.autorization
 									input(type="submit" name="loginMe" value="Войти").container__menu-link.loginMe
+			script(src="assets/js/webgl.js" defer)
 			footer
 				h4.footer-info &#169; Татьяна Войтович | Создано с любовью в Loftschool | 2016

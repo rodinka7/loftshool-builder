@@ -1,32 +1,33 @@
 
 .admin__content_header #{tabs.tab1.name}
 section.admin__content_block
-	section.admin__skills
-		.skills__head #{scills.Frontend.name}
-		ul.skills__list
-			each scill, id in scills
-				li.skills__item
-					.skills__item_name #{scill.scill1}
-					label.skills__label
-						input(type="text").skills__input
-						|%
-	section.admin__skills
-		.skills__head #{scills.Workflow.name}
-		ul.skills__list
-			each scill, id in scills
-				li.skills__item
-					.skills__item_name #{scill.scill2}
-					label.skills__label
-						input(type="text").skills__input
-						|%
-	section.admin__skills
-		.skills__head #{scills.Backend.name}
-		ul.skills__list
-			each scill, id in scills
-				li.skills__item
-					.skills__item_name #{scill.scill3}
-					label.skills__label
-						input(type="text").skills__input
-						|%
-	.admin__skills_saveBtn
-		input(type="button" value="Сохранить").save_btn.adminButton
+	form.admin__skills-form(action="" method="POST")
+		section.admin__skills
+			.skills__head #{scills.Frontend.name}
+			ul.skills__list
+				each scill, id in scills
+					li.skills__item
+						.skills__item_name #{scill.scill1}
+						label.skills__label
+							input(type="text" data-category= scills.Frontend.name data-skills=scill.scill1).skills__input
+							|%
+		section.admin__skills
+			.skills__head #{scills.Workflow.name}
+			ul.skills__list
+				each scill, id in scills
+					li.skills__item
+						.skills__item_name #{scill.scill2}
+						label.skills__label
+							input(type="text" data-category= scills.Workflow.name data-skills=scill.scill2).skills__input
+							|%
+		section.admin__skills
+			.skills__head #{scills.Backend.name}
+			ul.skills__list
+				each scill, id in scills
+					li.skills__item
+						.skills__item_name #{scill.scill3}
+						label.skills__label
+							input(type="text" data-category= scills.Backend.name data-skills=scill.scill3).skills__input
+							|%
+		.admin__skills_saveBtn
+			input(type="submit" value="Сохранить").save_btn.adminButton

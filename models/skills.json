@@ -1,7 +1,7 @@
 [
 	{
 		"id": "frontend",
-		"name": "frontend",
+		"name": "Frontend",
 		"items": {
 			"html": "HTML",
 			"css": "CSS",
@@ -26,4 +26,4 @@
 			"bower": "Bower"
 		}
 	}
-];
+]
