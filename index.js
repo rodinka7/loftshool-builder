@@ -20,12 +20,24 @@ app.post('/save', function(req, res) {
 	res.end();
 });
 
+app.post('/post', function(req, res) {
+	console.log('Поступил POST запрос!', req.body);
+	res.end();
+});
+
+app.post('/work', function(req, res) {
+	console.log('Поступил POST запрос!', req.body);
+	res.end();
+});
+
 app.get('/', function(req, res) {
 	res.setHeader('Content-type', 'text/html;charset=utf8');
 	res.end('работает!');
 });
 
-app.use('/admin', './routes/about');
+app.use('/admin', require('./routes/about'));
+app.use('/admin', require('./routes/post'));
+app.use('/admin', require('./routes/work'));
 
 app.use(function(req, res, next) {
 	res.status(404).send('Не удалось найти страницу!');

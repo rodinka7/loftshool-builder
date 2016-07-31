@@ -23,13 +23,14 @@ html
 						.admin__content_header #{tabs.tab3.name}
 						section.admin__content_block
 							.skills__head Добавить работу
-							input.blog-input.blog-item(type="text" placeholder="Название проекта")
-							input.blog-input.blog-item(type="text" placeholder="Технологии")
-							.blog__add-img
-								a.blog__add-img_link Загрузить картинку
+							form.admin__content-work(action="")
+								input.blog-input.blog-item(type="text" placeholder="Название проекта")
+								input.blog-input.blog-item(type="text" placeholder="Технологии")
+								label.blog__add-img Загрузить картинку
 									img.blog__add-img_image(src="assets/img/add-img.png")
-							.admin__skills_saveBtn
-								input(type="button" value="Добавить").save_btn.adminButton
+									input(type="file").blog__add-img_link 
+								.admin__skills_saveBtn
+									input(type="submit" value="Добавить").save_btn.adminButton
 						.admin__message#admin-message
 							.admin__message_text Сообщение отправлено
 							.admin__skills_saveBtn
