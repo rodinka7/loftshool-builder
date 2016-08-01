@@ -15,18 +15,30 @@ app.use(express.static(path.resolve(config.http.publicRoot)));
 app.use(bodyParser.json());
 
 // маршруты
+app.use('/admin', require('./routes/about'));
+app.use('/admin', require('./routes/post'));
+app.use('/admin', require('./routes/work'));
+app.use('/', require('./routes/main'));
+app.use('/mail', require('./routes/mail'));
+//========
+
 app.post('/save', function(req, res) {
-	console.log('Поступил POST запрос!', req.body);
+	console.log('Поступил POST запрос по маршруту Save!', req.body);
 	res.end();
 });
 
 app.post('/post', function(req, res) {
-	console.log('Поступил POST запрос!', req.body);
+	console.log('Поступил POST запрос по маршруту Post!', req.body);
 	res.end();
 });
 
 app.post('/work', function(req, res) {
-	console.log('Поступил POST запрос!', req.body);
+	console.log('Поступил POST запрос по маршруту Work!', req.body);
+	res.end();
+});
+
+app.post('/mail', function(req, res) {
+	console.log('Поступил POST запрос по маршруту Mail!', req.body);
 	res.end();
 });
 
@@ -34,10 +46,6 @@ app.get('/', function(req, res) {
 	res.setHeader('Content-type', 'text/html;charset=utf8');
 	res.end('работает!');
 });
-
-app.use('/admin', require('./routes/about'));
-app.use('/admin', require('./routes/post'));
-app.use('/admin', require('./routes/work'));
 
 app.use(function(req, res, next) {
 	res.status(404).send('Не удалось найти страницу!');

@@ -148,20 +148,22 @@
 }
 
 .blog__add-img{
-	margin-bottom:20px;
 	outline: none;
 	background: none;
 	border: none;
-	&_link{
-		color:#00bfa5;
-		text-decoration:none;
-		font:16px/35px 'robotomedium';
-		padding-left:50px;
-		position:relative;
-		cursor:pointer;
-		&:hover{
-			text-decoration:underline;
-		}
+	
+	color:#00bfa5;
+	font:16px/35px 'robotomedium';
+	
+	cursor: pointer;
+	padding-left: 50px;
+	position: relative;
+
+	&:hover {
+		color: #038472;
+	}
+	&_input{
+		opacity: 0;
 	}
 	&_image{
 		position:absolute;

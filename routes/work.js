@@ -2,13 +2,13 @@
 var fs = require('fs'),
 	path = require('path'),
 	route = require('express').Router(),
-	mongoose = require('mongoose'),
+	mongoose = require('../mongoose'),
 	multiparty = require('multiparty'),
 	config = require('../config.json');
 
 require('../models/work');
 
-route.post('/works', function(req, res) {
+route.post('/work', function(req, res) {
 	var form = new multiparty.Form();
 
 	form.parse(req, function(err, fields, files) {
@@ -23,7 +23,7 @@ route.post('/works', function(req, res) {
 				link: fields.workLink
 			});
 		item.save().then(work => {
-			var pictures = files.workPictures.filter( f => f.size).map(function(file, key) {
+			var pictures = files.workPicture.filter( f => f.size).map(function(file, key) {
 				var newFilePath = path.join('upload', `${work._id}_${key}${path.extname(file.path)}`);
 
 				fs.writeFileSync(path.resolve(config.http.publicRoot, newFilePath), fs.readFileSync(file.path));

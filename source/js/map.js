@@ -103,7 +103,8 @@
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    scrollwheel: false
                 };
 
                 // Get the HTML DOM element that will contain your map 

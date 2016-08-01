@@ -1,11 +1,11 @@
 'use strict';
 
 var route = require('express').Router(),
-	mongoose = require('mongoose');
+	mongoose = require('../mongoose');
 
 require('../models/article');
 
-route.post('/blog', function(req, res) {
+route.post('/post', function(req, res) {
 	var Model = mongoose.model('post'),
 		item = new Model({
 			title: req.body.itemName,

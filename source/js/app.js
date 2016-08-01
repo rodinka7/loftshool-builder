@@ -45,8 +45,9 @@
       scrollTop: reqScroll
     },1000); 
   })
+  
   //ВАлидация формы feedback
-  $('#submit').on('click', function(){
+  /*$('#submit').on('click', function(){
 
     var form = document.forms.feedback;
     validate(form);                         
@@ -76,10 +77,9 @@
       popup = $this.closest('.formPopup');
 
     popup.css({'visibility': 'hidden'});
-  })
+  })*/
 
   $('#reset').on('click',function(){
-    console.log($(this));
     document.forms.feedback.reset();
   })
 

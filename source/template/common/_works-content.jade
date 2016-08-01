@@ -44,12 +44,12 @@ section.about
 				form(name="feedback" method="post" id="contactForm").contact-me__form 
 					input.contact-me__input.name(type="text" placeholder="имя" name="name" id="contactName")
 					input.contact-me__input.email(type="email" placeholder="Email" name="email" id="contactEmail")
-					textarea.contact-me__textarea(cols="30" rows="10" placeholder="Связаться со мной" name="textarea" id="contactMess")
-				.contact-me__wrapper
-					ul.contact-me__list
-						li.contact-me__item
-							input(type="submit" value="Отправить").contact-me__link#submit
-						li.contact-me__item
-							input(type="reset" value="Очистить").contact-me__link#reset
+					textarea.contact-me__textarea(cols="30" rows="10" placeholder="Связаться со мной" name="contactMe" id="contactMess")
+					.contact-me__wrapper
+						ul.contact-me__list
+							li.contact-me__item
+								input(type="submit" value="Отправить").contact-me__link#submit
+							li.contact-me__item
+								input(type="reset" value="Очистить").contact-me__link#reset
 	
 	include footer

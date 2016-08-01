@@ -1,7 +1,7 @@
 'use strict';
 
 var route = require('express').Router(),
-	mongoose = require('mongoose'),
+	mongoose = require('../mongoose'),
 	tech = require('../models/skills.json'); 
 
 require('../models/skills');
@@ -21,7 +21,7 @@ route.get('/', function(req, res) {
 	});
 });
 
-route.post('/about', function(req, res) {
+route.post('/save', function(req, res) {
 	var Model = mongoose.model('skills'),
 		models = [];
 

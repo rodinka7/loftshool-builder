@@ -54,5 +54,24 @@
 		border-radius:10px;
 		border:none;
 		cursor:pointer;
+		&:hover {
+			background: #038472;
+		}
+	}
+}
+.admin__skills_saveBtn-work{
+	padding-bottom:40px;
+	margin-top: 50px;
+	.save_btn{
+		width:115px;
+		height:40px;
+		background:#00bfa5;
+		color:#ffffff;
+		border-radius:10px;
+		border:none;
+		cursor:pointer;
+		&:hover {
+			background: #038472;
+		}
 	}
 }
