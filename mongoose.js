@@ -13,7 +13,7 @@ var mongoose = require('mongoose'),
 // connect to mongo function
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost:3000', options)
+mongoose.connect('mongodb://localhost:27017/portfolio', options)
 	.catch(function(e) {
 		console.error(e);
 		throw e;

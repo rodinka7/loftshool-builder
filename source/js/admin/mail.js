@@ -14,4 +14,4 @@ $('#contactForm').submit(function(e) {
 
 	xhr.open('POST', '/mail');
 	xhr.send(JSON.stringify(data));
-})
+});

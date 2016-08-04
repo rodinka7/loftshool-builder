@@ -6,7 +6,7 @@ var fs = require('fs'),
 	config = require('./config.json'),
 	app = express(),
 	bodyParser = require('body-parser'),
-	mongoose = require('./mongoose');
+	mongoose = require('./mongoose.js');
 	
 
 app.set('views', path.resolve(`./${config.http.publicRoot}`));

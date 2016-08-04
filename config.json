@@ -14,12 +14,12 @@
 	"mail": {
 		"subject": "Сообщение с сайта-портфолио",
 		"smtp": {
-			"host": "smtp.gmail.com",
+			"host": "smtp.mail.ru",
 			"port": 465,
 			"secure": true,
 			"auth": {
-				"user": "rodinka7@gmail.com",
-				"pass": "Kbpf777Djqnjdbx"
+				"user": "tatyana_dnepr_87@mail.ru",
+				"pass": "24VoTaLiSa87"
 			}
 		}
 	}

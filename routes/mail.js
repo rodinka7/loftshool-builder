@@ -11,7 +11,7 @@ route.post('/', function(req, res) {
 
 	var transporter = nodemailer.createTransport(config.mail.smtp),
 		mailOptions = {
-			from: `"${req.body.name}"<${req.body.email}>`,
+			from: `"${req.body.name}" <${req.body.email}>`,
 			to: config.mail.smtp.auth.user,
 			subject: config.mail.subject,
 			text: req.body.text.trim().slice(0, 500)

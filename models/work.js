@@ -17,4 +17,17 @@ var mongoose = require('mongoose'),
 			type: [String]
 		}
 	});
+WorkSchema.statics.add = function (name, description, link, img) {
+  return new this({
+    slug: getSlug(name),
+    name: name,
+    description: tech,
+    link: link,
+    img: img
+  }).save();
+};
+
+WorkSchema.statics.getAll = function () {
+  return this.find({});
+};
 mongoose.model('work', WorkSchema);
