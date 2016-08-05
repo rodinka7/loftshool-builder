@@ -2,7 +2,7 @@
 var fs = require('fs'),
 	path = require('path'),
 	route = require('express').Router(),
-	mongoose = require('../mongoose'),
+	mongoose = require('mongoose'),
 	multiparty = require('multiparty'),
 	config = require('../config.json');
 

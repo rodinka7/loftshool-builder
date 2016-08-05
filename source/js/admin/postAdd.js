@@ -13,5 +13,6 @@ $('.admin__content-blog').submit(function(e) {
 	var xhr = new XMLHttpRequest();
 
 	xhr.open('POST', '/post');
+	xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8');
 	xhr.send(JSON.stringify(data));
 })

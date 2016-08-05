@@ -13,5 +13,6 @@ $('#contactForm').submit(function(e) {
 	var xhr = new XMLHttpRequest();
 
 	xhr.open('POST', '/mail');
+	xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8');
 	xhr.send(JSON.stringify(data));
 });

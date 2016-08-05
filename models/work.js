@@ -17,13 +17,13 @@ var mongoose = require('mongoose'),
 			type: [String]
 		}
 	});
-WorkSchema.statics.add = function (name, description, link, img) {
+WorkSchema.statics.add = function (name, tech, link, pictures) {
   return new this({
     slug: getSlug(name),
     name: name,
-    description: tech,
+    tech: tech,
     link: link,
-    img: img
+    pictures: pictures
   }).save();
 };
 

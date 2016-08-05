@@ -84,7 +84,7 @@
   })
 
   //Валидаций формы авторизации
-  $('.loginMe').on('click', function(){
+  /*$('.loginMe').on('click', function(){
     var loginForm = document.forms.loginForm;
     validateForm(loginForm);
   });
@@ -117,7 +117,7 @@
     }
 
     return valid; 
-  };
+  };*/
 })();
 
 //Admin - переключение вкладок

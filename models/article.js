@@ -16,17 +16,4 @@ var mongoose = require('mongoose'),
 		}
 	});
 
-BlogSchema.statics.add = function (title, date, text) {
-  return new this({
-    hash: getSlug(title),
-    title: title,
-    date: date,
-    text: text
-  }).save();
-};
-
-BlogSchema.statics.getAll = function () {
-  return this.find({});
-};
-
 mongoose.model('post', BlogSchema);

@@ -177,6 +177,9 @@ header{
     	border-bottom: none;
     	border-right: none;
     	margin:0 auto 30px;
+		&#input_password {
+			margin-top: -20px;
+		}
 		@include phones{
 			width:225px;
 			font-size:14px;
@@ -222,11 +225,21 @@ header{
 .input-wrapper{
 	display:block;
 }
-.svg-login, .svg-password{
+.svg-login{
 	position:relative;
 	width:25px;
 	height:25px;
 	top:35px;
+	left:30px;
+	@include phones{
+		left:45px;
+	}
+}
+.svg-password{
+	position:relative;
+	width:25px;
+	height:25px;
+	top:23px;
 	left:30px;
 	@include phones{
 		left:45px;

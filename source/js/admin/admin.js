@@ -22,18 +22,6 @@ $('.admin__skills-form').submit(function (e) {
 	var xhr = new XMLHttpRequest();
 
 	xhr.open('POST', '/save');
+	xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8');
 	xhr.send(JSON.stringify(data));
-
-	/*$.ajax({
-		url: 'admin/skills',
-		data: JSON.stringify(data),
-		type: 'POST',
-		contentType: 'application/json',
-		success: function() {
-			alert('Данные успешно отправлены на сервер!');
-		},
-		error: function(xhr, str) {
-			alert('Возникла ошибка: ' + xhr.responseCode);
-		}
-	});*/
 });

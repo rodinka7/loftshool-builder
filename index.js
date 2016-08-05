@@ -3,11 +3,22 @@
 var fs = require('fs'),
 	path = require('path'),
 	express = require('express'),
-	config = require('./config.json'),
+	jade = require('jade'),
 	app = express(),
+	config = require('./config.json'),
+	mongoose = require('./mongoose'),
 	bodyParser = require('body-parser'),
-	mongoose = require('./mongoose.js');
-	
+	session = require('express-session'),
+	MongoStore = require('connect-mongo')(session);
+
+app.use(session({
+	secret: 'loftschool',
+	saveUninitialized: false,
+	resave: false,
+	store: new MongoStore({mongooseConnection: mongoose.connection})
+}))
+
+app.set('view engine', 'jade');	
 
 app.set('views', path.resolve(`./${config.http.publicRoot}`));
 app.use(express.static(path.resolve(config.http.publicRoot)));
@@ -15,15 +26,23 @@ app.use(express.static(path.resolve(config.http.publicRoot)));
 app.use(bodyParser.json());
 
 // маршруты
-app.use('/admin', require('./routes/about'));
-app.use('/admin', require('./routes/post'));
-app.use('/admin', require('./routes/work'));
+app.use('/save', require('./routes/about'));
+app.use('/post', require('./routes/post'));
+app.use('/work', require('./routes/work'));
 app.use('/', require('./routes/main'));
 app.use('/mail', require('./routes/mail'));
+app.use('/auth', require('./routes/user'));
 //========
 
-app.post('/save', function(req, res) {
+app.post('/save', require('./routes/about'));
+app.post('/post', require('./routes/post'));
+app.post('/work', require('./routes/work'));
+app.post('/', require('./routes/main'));
+app.post('/mail', require('./routes/mail'));
+app.post('/auth', require('./routes/user'));
+/*app.post('/save', function(req, res) {
 	console.log('Поступил POST запрос по маршруту Save!', req.body);
+	fs.writeFileSync('./posts.txt', JSON.stringify(req.body));
 	res.end();
 });
 
@@ -41,6 +60,11 @@ app.post('/mail', function(req, res) {
 	console.log('Поступил POST запрос по маршруту Mail!', req.body);
 	res.end();
 });
+
+app.post('/auth', function(req, res) {
+	console.log('Поступил POST запрос по маршруту Auth!', req.body);
+	res.end();
+});*/
 
 app.get('/', function(req, res) {
 	res.setHeader('Content-type', 'text/html;charset=utf8');
