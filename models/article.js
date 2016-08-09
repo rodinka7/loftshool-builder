@@ -6,13 +6,13 @@ var mongoose = require('mongoose'),
 			type: String,
 			required: [true, 'Укажите заголовок статьи!']
 		},
-		body: {
-			type: String,
-			required: [true, 'Укажите содержимое статьи!']
-		},
 		date: {
 			type: String,
 			required: [true, 'Укажите дату публикации!']
+		},
+		body: {
+			type: String,
+			required: [true, 'Укажите содержимое статьи!']
 		}
 	});
 

@@ -8,9 +8,9 @@ require('../models/article');
 route.post('/post', function(req, res) {
 	var Model = mongoose.model('post'),
 		item = new Model({
-			title: req.body.itemTitle,
-			body: req.body.itemBody,
-			date: req.body.itemDate
+			title: req.body.title,
+			date: req.body.date,
+			body: req.body.body
 		});
 
 	item.save().then(

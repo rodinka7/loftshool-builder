@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 // маршруты
 app.use('/save', require('./routes/about'));
-app.use('/post', require('./routes/post'));
+//app.use('/post', require('./routes/post'));
 app.use('/work', require('./routes/work'));
 app.use('/', require('./routes/main'));
 app.use('/mail', require('./routes/mail'));
@@ -36,10 +36,19 @@ app.use('/auth', require('./routes/user'));
 
 app.post('/save', require('./routes/about'));
 app.post('/post', require('./routes/post'));
+
+app.get('/post', function(req, res) {
+	Model.find({}).then(function(posts){
+		console.log(posts);
+	});
+});
+
 app.post('/work', require('./routes/work'));
 app.post('/', require('./routes/main'));
 app.post('/mail', require('./routes/mail'));
 app.post('/auth', require('./routes/user'));
+
+
 /*app.post('/save', function(req, res) {
 	console.log('Поступил POST запрос по маршруту Save!', req.body);
 	fs.writeFileSync('./posts.txt', JSON.stringify(req.body));
